@@ -375,36 +375,56 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 </nav>
 
 <script>
-const votes={'01':0,'02':0,'03':0,'04':0,'05':0};
+// 1. Initialize votes: try to get them from localStorage, or start at 0
+let votes = JSON.parse(localStorage.getItem('mosaicVotes')) || {
+  '01': 0, '02': 0, '03': 0, '04': 0, '05': 0
+};
 
-function show(id,btn){
-  document.querySelectorAll('.board').forEach(b=>b.classList.remove('active'));
-  document.querySelectorAll('.nbtn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('board-'+id).classList.add('active');
+// Function to update the display on page load
+function updateDisplay() {
+  for (const id in votes) {
+    const n = votes[id];
+    const countEl = document.getElementById('cnt-' + id);
+    const infoEl = document.getElementById('vinfo-' + id);
+    if(countEl) countEl.textContent = n;
+    if(infoEl) infoEl.textContent = n + (n === 1 ? ' vote' : ' votes');
+  }
+}
+
+// Run this immediately when the page loads
+updateDisplay();
+
+function show(id, btn) {
+  document.querySelectorAll('.board').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.nbtn').forEach(b => b.classList.remove('active'));
+  document.getElementById('board-' + id).classList.add('active');
   btn.classList.add('active');
 }
 
-function vote(id){
+function vote(id) {
   votes[id]++;
-  const n=votes[id];
-  document.getElementById('cnt-'+id).textContent=n;
-  document.getElementById('vinfo-'+id).textContent=n+(n===1?' vote':' votes');
-  const btn=document.getElementById('vbtn-'+id);
+  // Save the updated votes object back to localStorage
+  localStorage.setItem('mosaicVotes', JSON.stringify(votes));
+  
+  updateDisplay();
+
+  const btn = document.getElementById('vbtn-' + id);
   btn.classList.add('voted');
-  btn.innerHTML='<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3L10 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Voted ✓';
-  setTimeout(()=>{
+  btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3L10 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Voted ✓';
+  
+  setTimeout(() => {
     btn.classList.remove('voted');
-    btn.innerHTML='<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg> Vote for this direction';
-  },1800);
+    btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg> Vote for this direction';
+  }, 1800);
 }
 
 // Keyboard nav
-document.addEventListener('keydown',e=>{
-  if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
-    const ids=['01','02','03','04','05'];
-    const active=document.querySelector('.nbtn.active');
-    const cur=ids.indexOf(active.dataset.id);
-    const next=ids[(cur+(e.key==='ArrowRight'?1:-1)+5)%5];
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+    const ids = ['01', '02', '03', '04', '05'];
+    const active = document.querySelector('.nbtn.active');
+    const cur = ids.indexOf(active.dataset.id);
+    const next = ids[(cur + (e.key === 'ArrowRight' ? 1 : -1) + 5) % 5];
     document.querySelector(`.nbtn[data-id="${next}"]`).click();
   }
 });
