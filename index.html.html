@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Divergent — Brand Identity Concepts</title>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Raleway:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Bebas+Neue&display=swap" rel="stylesheet">
+<title>Mosaic — Brand Identity Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%;overflow:hidden}
-body{font-family:'DM Sans',sans-serif;font-weight:300;background:#1A1A1A;color:#FAFAF8}
+body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5EDD8}
 
 /* Header */
-.hdr{position:fixed;top:0;left:0;right:0;height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;border-bottom:0.5px solid rgba(255,255,255,.1);z-index:50;background:#1A1A1A}
-.hdr-brand{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.35em;text-transform:uppercase;opacity:.4;font-weight:400}
-.hdr-right{display:flex;gap:26px}
-.tally{font-size:10px;letter-spacing:.12em;opacity:.38;display:flex;align-items:center;gap:7px;text-transform:uppercase;font-size:9px}
+.hdr{position:fixed;top:0;left:0;right:0;height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;border-bottom:0.5px solid rgba(255,255,255,.1);z-index:50;background:#0A0908}
+.hdr-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.3em;opacity:.45}
+.hdr-right{display:flex;gap:28px}
+.tally{font-size:10px;letter-spacing:.12em;opacity:.4;display:flex;align-items:center;gap:6px}
 .tdot{width:7px;height:7px;border-radius:50%}
-.tcnt{font-weight:500;font-size:15px;opacity:1;min-width:16px;font-family:'Oswald',sans-serif}
+.tcnt{font-weight:500;font-size:15px;opacity:1;min-width:16px}
 
 /* Stage */
 .stage{position:fixed;top:50px;bottom:56px;left:0;right:0}
@@ -49,109 +49,105 @@ body{font-family:'DM Sans',sans-serif;font-weight:300;background:#1A1A1A;color:#
 
 /* Vote */
 .varea{display:flex;align-items:center;gap:18px}
-.vbtn{display:inline-flex;align-items:center;gap:10px;padding:12px 26px;background:transparent;font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s;font-weight:400}
+.vbtn{display:inline-flex;align-items:center;gap:10px;padding:12px 26px;background:transparent;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s;font-weight:400}
 .vinfo{font-size:11px;letter-spacing:.08em;opacity:.3}
 
 /* Nav */
-.nav{position:fixed;bottom:0;left:0;right:0;height:56px;display:flex;background:rgba(26,26,26,.97);border-top:.5px solid rgba(255,255,255,.08);z-index:50}
-.nbtn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:none;color:rgba(250,250,248,.28);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;transition:color .3s,background .3s;position:relative}
+.nav{position:fixed;bottom:0;left:0;right:0;height:56px;display:flex;background:rgba(10,9,8,.97);border-top:.5px solid rgba(255,255,255,.08);z-index:50}
+.nbtn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:none;color:rgba(245,237,216,.28);cursor:pointer;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;transition:color .3s,background .3s;position:relative}
 .nbtn:not(:last-child)::after{content:'';position:absolute;right:0;top:14px;bottom:14px;width:.5px;background:rgba(255,255,255,.08)}
-.nbtn .n{font-size:20px;font-weight:300;font-family:'Lora',serif;line-height:1;font-style:italic}
-.nbtn[data-id="01"].active{color:#E2725B;background:rgba(226,114,91,.05)}
-.nbtn[data-id="02"].active{color:#FFFDD0;background:rgba(255,253,208,.04)}
-.nbtn[data-id="03"].active{color:#91967F;background:rgba(145,150,127,.05)}
-.nbtn[data-id="04"].active{color:#D28798;background:rgba(210,135,152,.05)}
+.nbtn .n{font-size:20px;font-weight:300;font-family:'Cormorant Garamond',serif;line-height:1}
+.nbtn[data-id="01"].active{color:#C4A24A;background:rgba(196,162,74,.04)}
+.nbtn[data-id="02"].active{color:#D4891A;background:rgba(212,137,26,.04)}
+.nbtn[data-id="03"].active{color:#B55832;background:rgba(181,88,50,.04)}
+.nbtn[data-id="04"].active{color:#C9A445;background:rgba(201,164,69,.04)}
 
-/* ======================== 01 — THE SUMMIT ======================== */
-.b01 .binfo{background:#1A2318;color:#FAFAF8}
-.b01 .bart{background:#1F2A1D}
-.b01 .wm{font-family:'Oswald',sans-serif;font-size:62px;letter-spacing:.18em;color:#E2725B;font-weight:700;text-transform:uppercase}
-.b01 .tagline{color:rgba(250,250,248,.38)}
-.b01 .tydemo{font-family:'Oswald',sans-serif;font-size:26px;letter-spacing:.1em;color:#E2725B;font-weight:500;text-transform:uppercase}
-.b01 .tybody{color:rgba(250,250,248,.52);letter-spacing:.02em}
-.b01 .vbtn{border:1px solid #E2725B;color:#E2725B}
-.b01 .vbtn:hover,.b01 .vbtn.voted{background:#E2725B;color:#1A2318}
-.b01 .swn,.b01 .tyeye,.b01 .vinfo{color:#FAFAF8}
+/* ======================== 01 — THE GOLDEN AGE ======================== */
+.b01 .binfo{background:#142014;color:#F4ECD5}
+.b01 .bart{background:#192A1A}
+.b01 .wm{font-family:'Cinzel',serif;font-size:56px;letter-spacing:.2em;color:#C4A24A;font-weight:600}
+.b01 .tagline,.b01 .vinfo{color:rgba(244,236,213,.4)}
+.b01 .tydemo{font-family:'Cinzel',serif;font-size:24px;letter-spacing:.14em;color:#C4A24A}
+.b01 .tybody{font-family:'Cormorant Garamond',serif;font-size:14px;color:rgba(244,236,213,.58)}
+.b01 .vbtn{border:1px solid #C4A24A;color:#C4A24A}
+.b01 .vbtn:hover,.b01 .vbtn.voted{background:#C4A24A;color:#142014}
+.b01 .swn,.b01 .tyeye{color:#F4ECD5}
 
-/* ======================== 02 — TRAIL LIGHT ======================== */
-.b02 .binfo{background:#FAFAF5;color:#2C2018}
-.b02 .bart{background:#F2EDE4}
-.b02 .wm{font-family:'Playfair Display',serif;font-size:60px;font-style:italic;font-weight:400;letter-spacing:.03em;color:#2C2018}
-.b02 .tagline{color:rgba(44,32,24,.38);font-family:'DM Sans',sans-serif}
-.b02 .tydemo{font-family:'Playfair Display',serif;font-size:30px;font-style:italic;font-weight:400;color:#5D6452}
-.b02 .tybody{color:rgba(44,32,24,.55);font-family:'DM Sans',sans-serif}
-.b02 .vbtn{border:1px solid #5D6452;color:#5D6452}
-.b02 .vbtn:hover,.b02 .vbtn.voted{background:#5D6452;color:#FAFAF5}
-.b02 .swn{color:#2C2018}
-.b02 .tyeye{color:#2C2018;opacity:.35}
-.b02 .vinfo{color:#2C2018;opacity:.32}
-.b02 .div{background:#2C2018}
+/* ======================== 02 — SAFFRON HOUR ======================== */
+.b02 .binfo{background:#19140F;color:#F6EDD6}
+.b02 .bart{background:#20190F}
+.b02 .wm{font-family:'Cormorant Garamond',serif;font-size:68px;font-style:italic;font-weight:300;letter-spacing:.02em;color:#F6EDD6}
+.b02 .tagline,.b02 .vinfo{color:rgba(246,237,214,.38)}
+.b02 .tydemo{font-family:'Cormorant Garamond',serif;font-size:30px;font-style:italic;font-weight:300;color:#D4891A}
+.b02 .tybody{font-family:'Cormorant Garamond',serif;font-size:14px;color:rgba(246,237,214,.55)}
+.b02 .vbtn{border:1px solid #D4891A;color:#D4891A}
+.b02 .vbtn:hover,.b02 .vbtn.voted{background:#D4891A;color:#19140F}
+.b02 .swn,.b02 .tyeye{color:#F6EDD6}
 
-/* ======================== 03 — HIGH SAGE ======================== */
-.b03 .binfo{background:#EDEDEA;color:#2C2C2A}
-.b03 .bart{background:#E3E0DA}
-.b03 .wm{font-family:'Raleway',sans-serif;font-size:54px;letter-spacing:.42em;color:#2C2C2A;font-weight:600;text-transform:uppercase}
-.b03 .tagline{color:rgba(44,44,42,.35);font-family:'Raleway',sans-serif;font-weight:300}
-.b03 .tydemo{font-family:'Raleway',sans-serif;font-size:24px;letter-spacing:.15em;color:#91967F;font-weight:500;text-transform:uppercase}
-.b03 .tybody{font-size:13px;color:rgba(44,44,42,.5);letter-spacing:.03em;font-family:'Raleway',sans-serif;font-weight:300}
-.b03 .vbtn{border:1px solid #91967F;color:#91967F}
-.b03 .vbtn:hover,.b03 .vbtn.voted{background:#91967F;color:#EDEDEA}
-.b03 .swn{color:#2C2C2A}
-.b03 .tyeye{color:#2C2C2A;opacity:.35}
-.b03 .vinfo{color:#2C2C2A;opacity:.32}
-.b03 .div{background:#2C2C2A}
+/* ======================== 03 — TIERRA ======================== */
+.b03 .binfo{background:#F0E0C8;color:#2C2018}
+.b03 .bart{background:#E5D0B2}
+.b03 .wm{font-family:'Playfair Display',serif;font-size:52px;letter-spacing:.35em;color:#2C2018;font-weight:400}
+.b03 .tagline{color:rgba(44,32,24,.38)}
+.b03 .tydemo{font-family:'Playfair Display',serif;font-size:26px;letter-spacing:.1em;color:#B55832}
+.b03 .tybody{font-size:13px;color:rgba(44,32,24,.52);letter-spacing:.03em}
+.b03 .vbtn{border:1px solid #B55832;color:#B55832}
+.b03 .vbtn:hover,.b03 .vbtn.voted{background:#B55832;color:#F0E0C8}
+.b03 .swn{color:#2C2018}
+.b03 .tyeye{color:#2C2018;opacity:.35}
+.b03 .vinfo{color:#2C2018;opacity:.32}
+.b03 .div{background:#2C2018}
 
-/* ======================== 04 — EMBER TRAIL ======================== */
-.b04 .binfo{background:#1E1008;color:#FAFAF8}
-.b04 .bart{background:#251408}
-.b04 .wm{font-family:'Bebas Neue',sans-serif;font-size:70px;letter-spacing:.12em;color:#D28798}
-.b04 .tagline{color:rgba(250,250,248,.3);font-style:italic;font-family:'Lora',serif;font-size:11px;letter-spacing:.2em}
-.b04 .tydemo{font-family:'Lora',serif;font-size:28px;font-style:italic;color:#FAFAF8}
-.b04 .tybody{font-family:'Lora',serif;font-size:13px;font-style:italic;color:rgba(250,250,248,.48);letter-spacing:.02em}
-.b04 .vbtn{border:1px solid #D28798;color:#D28798}
-.b04 .vbtn:hover,.b04 .vbtn.voted{background:#D28798;color:#1E1008}
-.b04 .swn,.b04 .tyeye,.b04 .vinfo{color:#FAFAF8}
+/* ======================== 04 — OBSIDIAN ======================== */
+.b04 .binfo{background:#0C0B09;color:#F5EED8}
+.b04 .bart{background:#100F0C}
+.b04 .wm{font-family:'DM Serif Display',serif;font-size:62px;letter-spacing:.06em;color:#C9A445}
+.b04 .tagline{color:rgba(245,238,216,.32);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.22em}
+.b04 .tydemo{font-family:'DM Serif Display',serif;font-size:28px;color:#F5EED8}
+.b04 .tybody{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:rgba(245,238,216,.5);letter-spacing:.02em}
+.b04 .vbtn{border:1px solid #C9A445;color:#C9A445}
+.b04 .vbtn:hover,.b04 .vbtn.voted{background:#C9A445;color:#0C0B09}
+.b04 .swn,.b04 .tyeye,.b04 .vinfo{color:#F5EED8}
 </style>
 </head>
 <body>
 
 <header class="hdr">
-  <span class="hdr-brand">Divergent — Brand Identity Review · 2025</span>
+  <span class="hdr-brand">Mosaic — Brand Identity Review · May 20, 2026</span>
   <div class="hdr-right">
-    <div class="tally"><div class="tdot" style="background:#E2725B"></div><span>The Summit</span><span class="tcnt" id="cnt-01">0</span></div>
-    <div class="tally"><div class="tdot" style="background:#5D6452"></div><span>Trail Light</span><span class="tcnt" id="cnt-02">0</span></div>
-    <div class="tally"><div class="tdot" style="background:#91967F"></div><span>High Sage</span><span class="tcnt" id="cnt-03">0</span></div>
-    <div class="tally"><div class="tdot" style="background:#D28798"></div><span>Ember Trail</span><span class="tcnt" id="cnt-04">0</span></div>
+    <div class="tally"><div class="tdot" style="background:#C4A24A"></div><span>Golden Age</span><span class="tcnt" id="cnt-01">0</span></div>
+    <div class="tally"><div class="tdot" style="background:#D4891A"></div><span>Saffron Hour</span><span class="tcnt" id="cnt-02">0</span></div>
+    <div class="tally"><div class="tdot" style="background:#B55832"></div><span>Tierra</span><span class="tcnt" id="cnt-03">0</span></div>
+    <div class="tally"><div class="tdot" style="background:#C9A445"></div><span>Obsidian</span><span class="tcnt" id="cnt-04">0</span></div>
   </div>
 </header>
 
 <div class="stage">
 
-<!-- ═══════════════════ BOARD 01 — THE SUMMIT ═══════════════════ -->
+<!-- ═══════════════════ BOARD 01 — THE GOLDEN AGE ═══════════════════ -->
 <div class="board b01 active" id="board-01">
   <div class="binfo">
     <div class="wm-wrap">
-      <svg width="44" height="28" viewBox="0 0 44 28" style="margin-bottom:16px;display:block">
-        <polygon points="22,2 38,26 6,26" fill="none" stroke="#E2725B" stroke-width="1.2" opacity=".9"/>
-        <polygon points="22,8 32,26 12,26" fill="#E2725B" opacity=".22"/>
-        <polygon points="10,26 22,10 17,26" fill="#E2725B" opacity=".45"/>
-        <line x1="0" y1="26" x2="44" y2="26" stroke="#E2725B" stroke-width=".6" opacity=".4"/>
-        <circle cx="22" cy="2" r="2" fill="#E2725B" opacity=".85"/>
+      <svg width="32" height="32" viewBox="0 0 32 32" style="margin-bottom:14px;display:block">
+        <rect x="16" y="1" width="10" height="10" transform="rotate(45 16 6)" fill="#C4A24A" opacity=".85"/>
+        <rect x="16" y="1" width="10" height="10" transform="rotate(45 16 6)" fill="none" stroke="#C4A24A" stroke-width=".5" opacity=".4"/>
+        <rect x="16" y="10" width="7" height="7" transform="rotate(45 16 13.5)" fill="#C4A24A" opacity=".45"/>
+        <circle cx="16" cy="16" r="2.5" fill="#C4A24A" opacity=".6"/>
       </svg>
-      <span class="wm">DIVERGENT</span>
-      <div class="tagline">Custom Apparel · Earthy · PNW</div>
+      <span class="wm">MOSAIC</span>
+      <div class="tagline">Collective · Curated · Experiential</div>
     </div>
     <div class="pal">
-      <div class="sw"><div class="swb" style="height:48px;background:#1A2318"></div><span class="swn">Midnight</span></div>
-      <div class="sw"><div class="swb" style="height:40px;background:#E2725B"></div><span class="swn">Terracotta</span></div>
-      <div class="sw"><div class="swb" style="height:36px;background:#5D6452"></div><span class="swn">Forest</span></div>
-      <div class="sw"><div class="swb" style="height:32px;background:#91967F"></div><span class="swn">Sage</span></div>
-      <div class="sw"><div class="swb" style="height:26px;background:#FAFAF8"></div><span class="swn">Summit</span></div>
+      <div class="sw"><div class="swb" style="height:48px;background:#142014"></div><span class="swn">Forest</span></div>
+      <div class="sw"><div class="swb" style="height:40px;background:#C4A24A"></div><span class="swn">Antique Gold</span></div>
+      <div class="sw"><div class="swb" style="height:36px;background:#8B6B2A"></div><span class="swn">Bronze</span></div>
+      <div class="sw"><div class="swb" style="height:32px;background:#C47040"></div><span class="swn">Copper</span></div>
+      <div class="sw"><div class="swb" style="height:26px;background:#F4ECD5"></div><span class="swn">Parchment</span></div>
     </div>
     <div class="tyrow">
-      <div class="tyeye">Typography — Oswald · DM Sans</div>
-      <div class="tydemo">Made for the Mountain</div>
-      <div class="tybody">Bold, durable, unapologetic. Apparel built for people who move through wild places — and want to look good doing it.</div>
+      <div class="tyeye">Typography — Cinzel · Cormorant Garamond</div>
+      <div class="tydemo">Curated Moments</div>
+      <div class="tybody">An event collective that transforms space into something extraordinary — where local artists, makers, and visionaries converge into one beautifully composed world.</div>
     </div>
     <div class="div"></div>
     <div class="varea">
@@ -165,112 +161,93 @@ body{font-family:'DM Sans',sans-serif;font-weight:300;background:#1A1A1A;color:#
   <div class="bart">
     <svg width="100%" height="100%" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <pattern id="pat01" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-          <line x1="0" y1="0" x2="40" y2="0" stroke="#E2725B" stroke-width=".2" opacity=".1"/>
-          <line x1="0" y1="0" x2="0" y2="40" stroke="#E2725B" stroke-width=".2" opacity=".1"/>
+        <pattern id="pat01" x="0" y="0" width="72" height="72" patternUnits="userSpaceOnUse">
+          <rect x="12" y="12" width="48" height="48" fill="none" stroke="#C4A24A" stroke-width=".5" opacity=".18"/>
+          <rect x="12" y="12" width="48" height="48" transform="rotate(45 36 36)" fill="none" stroke="#C4A24A" stroke-width=".4" opacity=".13"/>
+          <circle cx="36" cy="36" r="2" fill="#C4A24A" opacity=".22"/>
+          <circle cx="0"  cy="0"  r="1.5" fill="#C4A24A" opacity=".18"/>
+          <circle cx="72" cy="0"  r="1.5" fill="#C4A24A" opacity=".18"/>
+          <circle cx="0"  cy="72" r="1.5" fill="#C4A24A" opacity=".18"/>
+          <circle cx="72" cy="72" r="1.5" fill="#C4A24A" opacity=".18"/>
         </pattern>
       </defs>
       <rect width="600" height="700" fill="url(#pat01)"/>
 
-      <!-- Sun circle behind mountains -->
-      <circle cx="300" cy="320" r="110" fill="#E2725B" opacity=".12"/>
-      <circle cx="300" cy="320" r="90" fill="#E2725B" opacity=".1"/>
-      <circle cx="300" cy="320" r="68" fill="#E2725B" opacity=".15"/>
+      <!-- Central medallion -->
+      <g transform="translate(300,350)">
+        <circle r="210" fill="none" stroke="#C4A24A" stroke-width=".4" opacity=".12"/>
+        <circle r="195" fill="none" stroke="#C4A24A" stroke-width=".6" opacity=".18" stroke-dasharray="5 4"/>
+        <circle r="175" fill="none" stroke="#C4A24A" stroke-width=".5" opacity=".15"/>
 
-      <!-- Sun rays -->
-      <g stroke="#E2725B" stroke-width=".7" opacity=".2" transform="translate(300,320)">
-        <line x1="0" y1="-130" x2="0" y2="-155"/>
-        <line x1="65" y1="-113" x2="78" y2="-135"/>
-        <line x1="113" y1="-65" x2="135" y2="-78"/>
-        <line x1="130" y1="0" x2="155" y2="0"/>
-        <line x1="113" y1="65" x2="135" y2="78"/>
-        <line x1="65" y1="113" x2="78" y2="135"/>
-        <line x1="0" y1="130" x2="0" y2="155"/>
-        <line x1="-65" y1="113" x2="-78" y2="135"/>
-        <line x1="-113" y1="65" x2="-135" y2="78"/>
-        <line x1="-130" y1="0" x2="-155" y2="0"/>
-        <line x1="-113" y1="-65" x2="-135" y2="-78"/>
-        <line x1="-65" y1="-113" x2="-78" y2="-135"/>
+        <!-- Petal ring: 8 ellipses -->
+        <g opacity=".28" stroke="#C4A24A" stroke-width=".8" fill="none">
+          <ellipse rx="40" ry="90" transform="rotate(0)"/>
+          <ellipse rx="40" ry="90" transform="rotate(45)"/>
+          <ellipse rx="40" ry="90" transform="rotate(90)"/>
+          <ellipse rx="40" ry="90" transform="rotate(135)"/>
+        </g>
+
+        <!-- Octagon ring -->
+        <polygon points="0,-120 85,-85 120,0 85,85 0,120 -85,85 -120,0 -85,-85" fill="none" stroke="#C4A24A" stroke-width=".8" opacity=".35"/>
+        <polygon points="0,-88 62,-62 88,0 62,62 0,88 -62,62 -88,0 -62,-62" fill="none" stroke="#C4A24A" stroke-width=".5" opacity=".25"/>
+
+        <!-- 8-point star -->
+        <polygon points="0,-68 9,-24 48,-48 24,-9 68,0 24,9 48,48 9,24 0,68 -9,24 -48,48 -24,9 -68,0 -24,-9 -48,-48 -9,-24" fill="#C4A24A" opacity=".18"/>
+        <polygon points="0,-68 9,-24 48,-48 24,-9 68,0 24,9 48,48 9,24 0,68 -9,24 -48,48 -24,9 -68,0 -24,-9 -48,-48 -9,-24" fill="none" stroke="#C4A24A" stroke-width=".8" opacity=".45"/>
+
+        <circle r="22" fill="#C4A24A" opacity=".18"/>
+        <circle r="14" fill="#C4A24A" opacity=".3"/>
+        <circle r="7"  fill="#C4A24A" opacity=".65"/>
+        <circle r="3"  fill="#C4A24A" opacity=".9"/>
       </g>
 
-      <!-- Background mountain range (far) -->
-      <polygon points="0,480 80,290 160,420 240,240 340,380 420,200 520,350 600,280 600,700 0,700" fill="#253025" opacity=".8"/>
-
-      <!-- Mid mountain range -->
-      <polygon points="0,560 100,360 180,460 280,280 360,400 460,260 560,380 600,340 600,700 0,700" fill="#1F2A1D" opacity=".9"/>
-
-      <!-- Foreground mountain (hero) -->
-      <polygon points="80,700 300,240 520,700" fill="#1A2318"/>
-      <polygon points="180,700 300,280 420,700" fill="#E2725B" opacity=".12"/>
-
-      <!-- Snow cap -->
-      <polygon points="265,295 300,240 335,295 310,285 300,300 290,285" fill="#FAFAF8" opacity=".55"/>
-
-      <!-- Pine tree line (foreground) -->
-      <g fill="#142012" opacity=".95">
-        <!-- tree cluster left -->
-        <polygon points="38,700 52,660 66,700"/>
-        <polygon points="44,680 52,650 60,680"/>
-        <polygon points="60,700 76,655 92,700"/>
-        <polygon points="67,675 76,643 85,675"/>
-        <polygon points="85,700 100,658 115,700"/>
-        <polygon points="92,678 100,648 108,678"/>
-        <!-- tree cluster right -->
-        <polygon points="485,700 500,658 515,700"/>
-        <polygon points="492,678 500,648 508,678"/>
-        <polygon points="510,700 525,655 540,700"/>
-        <polygon points="517,675 525,643 533,675"/>
-        <polygon points="530,700 548,653 566,700"/>
-        <polygon points="538,678 548,646 558,678"/>
+      <!-- Corner ornaments -->
+      <g stroke="#C4A24A" fill="#C4A24A" opacity=".28">
+        <g transform="translate(72,72)">
+          <polygon points="0,-24 6,-6 24,0 6,6 0,24 -6,6 -24,0 -6,-6" fill="none" stroke-width=".7"/>
+          <circle r="3.5"/>
+        </g>
+        <g transform="translate(528,72)">
+          <polygon points="0,-24 6,-6 24,0 6,6 0,24 -6,6 -24,0 -6,-6" fill="none" stroke-width=".7"/>
+          <circle r="3.5"/>
+        </g>
+        <g transform="translate(72,628)">
+          <polygon points="0,-24 6,-6 24,0 6,6 0,24 -6,6 -24,0 -6,-6" fill="none" stroke-width=".7"/>
+          <circle r="3.5"/>
+        </g>
+        <g transform="translate(528,628)">
+          <polygon points="0,-24 6,-6 24,0 6,6 0,24 -6,6 -24,0 -6,-6" fill="none" stroke-width=".7"/>
+          <circle r="3.5"/>
+        </g>
       </g>
 
-      <!-- Elevation lines / topo -->
-      <g fill="none" stroke="#E2725B" stroke-width=".4" opacity=".18">
-        <ellipse cx="300" cy="600" rx="240" ry="28"/>
-        <ellipse cx="300" cy="570" rx="200" ry="22"/>
-        <ellipse cx="300" cy="544" rx="162" ry="18"/>
-        <ellipse cx="300" cy="522" rx="128" ry="14"/>
-      </g>
-
-      <!-- Corner details -->
-      <g stroke="#E2725B" stroke-width=".6" opacity=".28">
-        <line x1="48" y1="58" x2="90" y2="58"/>
-        <line x1="48" y1="58" x2="48" y2="100"/>
-        <line x1="552" y1="58" x2="510" y2="58"/>
-        <line x1="552" y1="58" x2="552" y2="100"/>
-        <line x1="48" y1="642" x2="90" y2="642"/>
-        <line x1="48" y1="642" x2="48" y2="600"/>
-        <line x1="552" y1="642" x2="510" y2="642"/>
-        <line x1="552" y1="642" x2="552" y2="600"/>
-      </g>
-
-      <text x="300" y="640" text-anchor="middle" font-family="Oswald,sans-serif" font-size="10" letter-spacing="8" fill="#E2725B" opacity=".35" font-weight="500">DIVERGENT CUSTOM APPAREL</text>
-      <text x="300" y="658" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" letter-spacing="5" fill="#FAFAF8" opacity=".15">Pacific Northwest</text>
+      <text x="300" y="342" text-anchor="middle" font-family="Cinzel,serif" font-size="12" letter-spacing="10" fill="#C4A24A" opacity=".42">MOSAIC</text>
+      <text x="300" y="362" text-anchor="middle" font-family="Cinzel,serif" font-size="8" letter-spacing="6" fill="#C4A24A" opacity=".28">COLLECTIVE</text>
     </svg>
   </div>
 </div>
 
-<!-- ═══════════════════ BOARD 02 — TRAIL LIGHT ═══════════════════ -->
+<!-- ═══════════════════ BOARD 02 — SAFFRON HOUR ═══════════════════ -->
 <div class="board b02" id="board-02">
   <div class="binfo">
     <div class="wm-wrap">
-      <div style="font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:.36em;color:#91967F;margin-bottom:16px;text-transform:uppercase;font-weight:400">Handcrafted · Pacific Northwest</div>
-      <span class="wm">Divergent</span>
-      <div class="tagline">Wear the wild</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:.36em;color:#D4891A;margin-bottom:16px;text-transform:uppercase">Est. 2024 · Roanoke, Virginia</div>
+      <span class="wm">Mosaic</span>
+      <div class="tagline">Where Beauty Gathers</div>
     </div>
     <div class="pal">
-      <div class="sw"><div class="swb" style="height:48px;background:#2C2018"></div><span class="swn">Earth</span></div>
-      <div class="sw"><div class="swb" style="height:40px;background:#E2725B"></div><span class="swn">Terracotta</span></div>
-      <div class="sw"><div class="swb" style="height:36px;background:#5D6452"></div><span class="swn">Forest</span></div>
-      <div class="sw"><div class="swb" style="height:32px;background:#D28798"></div><span class="swn">Dusty Rose</span></div>
-      <div class="sw"><div class="swb" style="height:26px;background:#FFFDD0"></div><span class="swn">Cream</span></div>
+      <div class="sw"><div class="swb" style="height:48px;background:#19140F"></div><span class="swn">Obsidian</span></div>
+      <div class="sw"><div class="swb" style="height:40px;background:#D4891A"></div><span class="swn">Saffron</span></div>
+      <div class="sw"><div class="swb" style="height:36px;background:#A85C3C"></div><span class="swn">Terra</span></div>
+      <div class="sw"><div class="swb" style="height:32px;background:#7A3828"></div><span class="swn">Ember</span></div>
+      <div class="sw"><div class="swb" style="height:26px;background:#F6EDD6"></div><span class="swn">Warm White</span></div>
     </div>
     <div class="tyrow">
-      <div class="tyeye">Typography — Playfair Display · DM Sans</div>
-      <div class="tydemo">Nature-made, hand-worn</div>
-      <div class="tybody">Clothing that carries the scent of cedar and the warmth of afternoon light — crafted for those who find meaning in the trail.</div>
+      <div class="tyeye">Typography — Cormorant Garamond (Italic)</div>
+      <div class="tydemo">An Evening of Beauty</div>
+      <div class="tybody">Immersive gatherings that honor the art of experience — each event a sensory world unto itself, warm and luminous as firelight.</div>
     </div>
-    <div class="div"></div>
+    <div class="div" style="background:rgba(246,237,214,.2)"></div>
     <div class="varea">
       <button class="vbtn" id="vbtn-02" onclick="vote('02')">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg>
@@ -281,114 +258,91 @@ body{font-family:'DM Sans',sans-serif;font-weight:300;background:#1A1A1A;color:#
   </div>
   <div class="bart">
     <svg width="100%" height="100%" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-
-      <!-- Warm cream texture lines -->
-      <g stroke="#5D6452" opacity=".07">
-        <line x1="0" y1="100" x2="600" y2="100" stroke-width=".5"/>
-        <line x1="0" y1="200" x2="600" y2="200" stroke-width=".5"/>
-        <line x1="0" y1="300" x2="600" y2="300" stroke-width=".5"/>
-        <line x1="0" y1="400" x2="600" y2="400" stroke-width=".5"/>
-        <line x1="0" y1="500" x2="600" y2="500" stroke-width=".5"/>
-        <line x1="0" y1="600" x2="600" y2="600" stroke-width=".5"/>
+      <!-- Background arch repeats -->
+      <g fill="none" stroke="#D4891A" opacity=".1">
+        <!-- Large arches -->
+        <path d="M50,700 L50,310 Q50,110 200,110 Q350,110 350,310 L350,700" stroke-width=".8"/>
+        <path d="M250,700 L250,310 Q250,110 400,110 Q550,110 550,310 L550,700" stroke-width=".8"/>
+        <!-- Medium arches -->
+        <path d="M-20,700 L-20,430 Q-20,290 80,290 Q180,290 180,430 L180,700" stroke-width=".5"/>
+        <path d="M180,700 L180,430 Q180,290 280,290 Q380,290 380,430 L380,700" stroke-width=".5"/>
+        <path d="M380,700 L380,430 Q380,290 480,290 Q580,290 580,430 L580,700" stroke-width=".5"/>
       </g>
 
-      <!-- Large sun -->
-      <circle cx="300" cy="260" r="150" fill="#FFFDD0" opacity=".6"/>
-      <circle cx="300" cy="260" r="120" fill="#FFFDD0" opacity=".5"/>
-      <circle cx="300" cy="260" r="90" fill="#E2725B" opacity=".25"/>
+      <!-- Hero arch: warm glow fill -->
+      <path d="M150,700 L150,260 Q150,80 300,80 Q450,80 450,260 L450,700" fill="#D4891A" opacity=".055"/>
+      <path d="M150,700 L150,260 Q150,80 300,80 Q450,80 450,260 L450,700" fill="none" stroke="#D4891A" stroke-width="1.5" opacity=".38"/>
+      <path d="M180,700 L180,280 Q180,120 300,120 Q420,120 420,280 L420,700" fill="none" stroke="#D4891A" stroke-width=".7" opacity=".22"/>
 
-      <!-- Sun lines -->
-      <g stroke="#E2725B" opacity=".18" stroke-width="1">
-        <line x1="300" y1="90" x2="300" y2="60"/>
-        <line x1="406" y1="154" x2="426" y2="136"/>
-        <line x1="450" y1="260" x2="480" y2="260"/>
-        <line x1="406" y1="366" x2="426" y2="384"/>
-        <line x1="300" y1="430" x2="300" y2="460"/>
-        <line x1="194" y1="366" x2="174" y2="384"/>
-        <line x1="150" y1="260" x2="120" y2="260"/>
-        <line x1="194" y1="154" x2="174" y2="136"/>
+      <!-- Keystone ornament -->
+      <g transform="translate(300,80)">
+        <polygon points="0,-22 7,-7 22,0 7,7 0,22 -7,7 -22,0 -7,-7" fill="#D4891A" opacity=".55"/>
+        <polygon points="0,-30 8,-8 30,0 8,8 0,30 -8,8 -30,0 -8,-8" fill="none" stroke="#D4891A" stroke-width=".8" opacity=".35"/>
+        <circle r="4.5" fill="#D4891A" opacity=".75"/>
       </g>
 
-      <!-- Mountain silhouette (gentle) -->
-      <polygon points="0,580 150,320 280,480 350,280 480,420 600,300 600,700 0,700" fill="#5D6452" opacity=".35"/>
-      <polygon points="0,640 120,420 240,540 340,360 450,500 570,400 600,440 600,700 0,700" fill="#5D6452" opacity=".45"/>
-
-      <!-- Pine trees (delicate) -->
-      <g fill="#5D6452" opacity=".55">
-        <polygon points="50,700 65,660 80,700"/>
-        <polygon points="57,672 65,642 73,672"/>
-        <polygon points="75,700 92,650 109,700"/>
-        <polygon points="83,668 92,636 101,668"/>
-        <polygon points="100,700 115,658 130,700"/>
-
-        <polygon points="470,700 488,653 506,700"/>
-        <polygon points="479,670 488,638 497,670"/>
-        <polygon points="500,700 518,652 536,700"/>
-        <polygon points="509,668 518,636 527,668"/>
-        <polygon points="530,700 545,660 560,700"/>
+      <!-- Column capitals -->
+      <g transform="translate(150,265)" stroke="#D4891A" fill="none" opacity=".25">
+        <line x1="-20" y1="0" x2="20" y2="0" stroke-width=".8"/>
+        <line x1="-14" y1="8" x2="14" y2="8" stroke-width=".5"/>
+        <line x1="-8" y1="-8" x2="8" y2="-8" stroke-width=".5"/>
+      </g>
+      <g transform="translate(450,265)" stroke="#D4891A" fill="none" opacity=".25">
+        <line x1="-20" y1="0" x2="20" y2="0" stroke-width=".8"/>
+        <line x1="-14" y1="8" x2="14" y2="8" stroke-width=".5"/>
+        <line x1="-8" y1="-8" x2="8" y2="-8" stroke-width=".5"/>
       </g>
 
-      <!-- Botanical sprigs -->
-      <g stroke="#5D6452" stroke-width=".8" fill="none" opacity=".3" transform="translate(300,555)">
-        <line x1="0" y1="0" x2="0" y2="-40"/>
-        <line x1="0" y1="-12" x2="-14" y2="-24"/>
-        <line x1="0" y1="-12" x2="14" y2="-24"/>
-        <line x1="0" y1="-26" x2="-10" y2="-38"/>
-        <line x1="0" y1="-26" x2="10" y2="-38"/>
-      </g>
-      <g stroke="#5D6452" stroke-width=".8" fill="none" opacity=".3" transform="translate(480,555)">
-        <line x1="0" y1="0" x2="0" y2="-40"/>
-        <line x1="0" y1="-12" x2="-14" y2="-24"/>
-        <line x1="0" y1="-12" x2="14" y2="-24"/>
-        <line x1="0" y1="-26" x2="-10" y2="-38"/>
-        <line x1="0" y1="-26" x2="10" y2="-38"/>
-      </g>
-      <g stroke="#5D6452" stroke-width=".8" fill="none" opacity=".3" transform="translate(120,555)">
-        <line x1="0" y1="0" x2="0" y2="-40"/>
-        <line x1="0" y1="-12" x2="-14" y2="-24"/>
-        <line x1="0" y1="-12" x2="14" y2="-24"/>
-        <line x1="0" y1="-26" x2="-10" y2="-38"/>
-        <line x1="0" y1="-26" x2="10" y2="-38"/>
+      <!-- Central rosette -->
+      <g transform="translate(300,430)" opacity=".45">
+        <circle r="62" fill="none" stroke="#D4891A" stroke-width=".6" opacity=".3"/>
+        <circle r="52" fill="none" stroke="#D4891A" stroke-width="1" opacity=".22"/>
+        <g fill="none" stroke="#D4891A" stroke-width=".9" opacity=".28">
+          <ellipse rx="15" ry="42" transform="rotate(0)"/>
+          <ellipse rx="15" ry="42" transform="rotate(30)"/>
+          <ellipse rx="15" ry="42" transform="rotate(60)"/>
+          <ellipse rx="15" ry="42" transform="rotate(90)"/>
+          <ellipse rx="15" ry="42" transform="rotate(120)"/>
+          <ellipse rx="15" ry="42" transform="rotate(150)"/>
+        </g>
+        <circle r="14" fill="#D4891A" opacity=".22"/>
+        <circle r="7"  fill="#D4891A" opacity=".42"/>
+        <circle r="3"  fill="#D4891A" opacity=".65"/>
       </g>
 
-      <!-- Wordmark circle badge -->
-      <circle cx="300" cy="260" r="62" fill="none" stroke="#5D6452" stroke-width="1.2" opacity=".35"/>
-      <circle cx="300" cy="260" r="54" fill="none" stroke="#5D6452" stroke-width=".4" opacity=".22"/>
-      <text x="300" y="248" text-anchor="middle" font-family="Playfair Display,serif" font-size="9" letter-spacing="4" fill="#2C2018" opacity=".52" font-style="italic">Divergent</text>
-      <line x1="252" y1="260" x2="348" y2="260" stroke="#E2725B" stroke-width=".5" opacity=".4"/>
-      <text x="300" y="274" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7.5" letter-spacing="5" fill="#2C2018" opacity=".38">APPAREL</text>
-
-      <text x="300" y="648" text-anchor="middle" font-family="Playfair Display,serif" font-size="11" letter-spacing="4" fill="#5D6452" opacity=".42" font-style="italic">divergentapparel.com</text>
+      <!-- Horizontal rule -->
+      <line x1="110" y1="580" x2="490" y2="580" stroke="#D4891A" stroke-width=".4" opacity=".2"/>
+      <text x="300" y="600" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="16" letter-spacing="4" fill="#F6EDD6" opacity=".22" font-style="italic">Mosaic</text>
+      <text x="300" y="618" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="9" letter-spacing="7" fill="#D4891A" opacity=".3">COLLECTIVE</text>
     </svg>
   </div>
 </div>
 
-<!-- ═══════════════════ BOARD 03 — HIGH SAGE ═══════════════════ -->
+<!-- ═══════════════════ BOARD 03 — TIERRA ═══════════════════ -->
 <div class="board b03" id="board-03">
   <div class="binfo">
     <div class="wm-wrap">
-      <svg width="36" height="20" viewBox="0 0 36 20" style="margin-bottom:16px;display:block">
-        <line x1="0" y1="10" x2="36" y2="10" stroke="#91967F" stroke-width=".7" opacity=".5"/>
-        <line x1="0" y1="6" x2="36" y2="6" stroke="#91967F" stroke-width=".4" opacity=".3"/>
-        <line x1="0" y1="14" x2="36" y2="14" stroke="#91967F" stroke-width=".4" opacity=".3"/>
-        <circle cx="18" cy="10" r="3" fill="#91967F" opacity=".7"/>
-        <circle cx="6" cy="10" r="1.5" fill="#91967F" opacity=".4"/>
-        <circle cx="30" cy="10" r="1.5" fill="#91967F" opacity=".4"/>
+      <svg width="34" height="34" viewBox="0 0 34 34" style="margin-bottom:14px;display:block">
+        <rect x="3"  y="3"  width="13" height="13" fill="#B55832" opacity=".9"/>
+        <rect x="18" y="3"  width="13" height="13" fill="#B55832" opacity=".5"/>
+        <rect x="3"  y="18" width="13" height="13" fill="#B55832" opacity=".5"/>
+        <rect x="18" y="18" width="13" height="13" fill="#6B8C72" opacity=".55"/>
+        <rect x="7"  y="7"  width="20" height="20" fill="none" stroke="#B55832" stroke-width=".5" opacity=".35"/>
       </svg>
-      <span class="wm">DIVERGENT</span>
-      <div class="tagline">Earthy · Intentional · PNW</div>
+      <span class="wm">MOSAIC</span>
+      <div class="tagline">Hand-Curated · Deeply Human</div>
     </div>
     <div class="pal">
-      <div class="sw"><div class="swb" style="height:48px;background:#2C2C2A"></div><span class="swn">Bark</span></div>
-      <div class="sw"><div class="swb" style="height:40px;background:#91967F"></div><span class="swn">Sage</span></div>
-      <div class="sw"><div class="swb" style="height:36px;background:#E2725B"></div><span class="swn">Terracotta</span></div>
-      <div class="sw"><div class="swb" style="height:32px;background:#F5F5DC"></div><span class="swn">Beige</span></div>
-      <div class="sw"><div class="swb" style="height:26px;background:#EDEDEA"></div><span class="swn">Stone</span></div>
+      <div class="sw"><div class="swb" style="height:48px;background:#2C2018"></div><span class="swn">Charcoal</span></div>
+      <div class="sw"><div class="swb" style="height:40px;background:#B55832"></div><span class="swn">Terracotta</span></div>
+      <div class="sw"><div class="swb" style="height:36px;background:#6B8C72"></div><span class="swn">Sage</span></div>
+      <div class="sw"><div class="swb" style="height:32px;background:#E8C98A"></div><span class="swn">Sand</span></div>
+      <div class="sw"><div class="swb" style="height:26px;background:#F0E0C8"></div><span class="swn">Cream</span></div>
     </div>
     <div class="tyrow">
-      <div class="tyeye">Typography — Raleway · DM Sans</div>
-      <div class="tydemo">Clean Roots, Open Air</div>
-      <div class="tybody">Minimal in form, maximal in feeling. Apparel for those who appreciate quiet design and wide open spaces.</div>
+      <div class="tyeye">Typography — Playfair Display · Jost</div>
+      <div class="tydemo">The Art of Gathering</div>
+      <div class="tybody">Rooted in craft and warmth — experiences designed by hand, for people who live beautifully and gather with intention.</div>
     </div>
     <div class="div"></div>
     <div class="varea">
@@ -402,97 +356,93 @@ body{font-family:'DM Sans',sans-serif;font-weight:300;background:#1A1A1A;color:#
   <div class="bart">
     <svg width="100%" height="100%" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <pattern id="pat03" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-          <circle cx="30" cy="30" r="28" fill="none" stroke="#91967F" stroke-width=".3" opacity=".18"/>
-          <circle cx="0" cy="0" r="1" fill="#91967F" opacity=".2"/>
-          <circle cx="60" cy="0" r="1" fill="#91967F" opacity=".2"/>
-          <circle cx="0" cy="60" r="1" fill="#91967F" opacity=".2"/>
-          <circle cx="60" cy="60" r="1" fill="#91967F" opacity=".2"/>
+        <pattern id="pat03" x="0" y="0" width="56" height="56" patternUnits="userSpaceOnUse">
+          <rect x="10" y="10" width="36" height="36" transform="rotate(45 28 28)" fill="#B55832" opacity=".1"/>
+          <rect x="10" y="10" width="36" height="36" transform="rotate(45 28 28)" fill="none" stroke="#B55832" stroke-width=".5" opacity=".22"/>
+          <line x1="28" y1="0" x2="28" y2="56" stroke="#B55832" stroke-width=".3" opacity=".1"/>
+          <line x1="0" y1="28" x2="56" y2="28" stroke="#B55832" stroke-width=".3" opacity=".1"/>
+          <circle cx="28" cy="28" r="1.8" fill="#B55832" opacity=".25"/>
+          <circle cx="0"  cy="0"  r="1.2" fill="#B55832" opacity=".18"/>
+          <circle cx="56" cy="0"  r="1.2" fill="#B55832" opacity=".18"/>
+          <circle cx="0"  cy="56" r="1.2" fill="#B55832" opacity=".18"/>
+          <circle cx="56" cy="56" r="1.2" fill="#B55832" opacity=".18"/>
         </pattern>
       </defs>
       <rect width="600" height="700" fill="url(#pat03)"/>
 
-      <!-- Topographic rings centered -->
-      <g fill="none" stroke="#91967F" transform="translate(300,320)">
-        <ellipse rx="240" ry="80" stroke-width=".4" opacity=".12"/>
-        <ellipse rx="205" ry="68" stroke-width=".4" opacity=".14"/>
-        <ellipse rx="172" ry="57" stroke-width=".5" opacity=".16"/>
-        <ellipse rx="140" ry="46" stroke-width=".5" opacity=".18"/>
-        <ellipse rx="110" ry="36" stroke-width=".6" opacity=".2"/>
-        <ellipse rx="82" ry="27" stroke-width=".6" opacity=".22"/>
-        <ellipse rx="56" ry="18" stroke-width=".8" opacity=".26"/>
-        <ellipse rx="32" ry="10" stroke-width="1" opacity=".32"/>
-        <ellipse rx="14" ry="4.5" stroke-width="1.2" opacity=".4"/>
+      <!-- Event invitation card -->
+      <filter id="shd"><feDropShadow dx="4" dy="6" stdDeviation="8" flood-color="#8B4A28" flood-opacity=".2"/></filter>
+
+      <!-- Card body -->
+      <rect x="148" y="138" width="304" height="420" rx="3" fill="#F0E0C8" filter="url(#shd)"/>
+      <rect x="158" y="148" width="284" height="400" rx="2" fill="none" stroke="#B55832" stroke-width=".6" opacity=".25"/>
+
+      <!-- Terracotta header band -->
+      <rect x="148" y="138" width="304" height="88" rx="3" fill="#B55832"/>
+      <!-- Sage stripe -->
+      <rect x="148" y="222" width="304" height="5" fill="#6B8C72"/>
+      <!-- Sand stripe -->
+      <rect x="148" y="227" width="304" height="2.5" fill="#E8C98A" opacity=".7"/>
+
+      <!-- Tile dots in header -->
+      <g fill="rgba(240,224,200,.22)" transform="translate(148,138)">
+        <rect x="18" y="14" width="16" height="16" transform="rotate(45 26 22)"/>
+        <rect x="60" y="14" width="16" height="16" transform="rotate(45 68 22)"/>
+        <rect x="102" y="14" width="16" height="16" transform="rotate(45 110 22)"/>
+        <rect x="144" y="14" width="16" height="16" transform="rotate(45 152 22)"/>
+        <rect x="186" y="14" width="16" height="16" transform="rotate(45 194 22)"/>
+        <rect x="228" y="14" width="16" height="16" transform="rotate(45 236 22)"/>
+        <rect x="270" y="14" width="16" height="16" transform="rotate(45 278 22)"/>
       </g>
 
-      <!-- Central mountain form (minimal) -->
-      <polygon points="300,110 480,560 120,560" fill="none" stroke="#91967F" stroke-width="1" opacity=".4"/>
-      <polygon points="300,150 440,540 160,540" fill="#91967F" opacity=".07"/>
+      <!-- Card content -->
+      <text x="300" y="280" text-anchor="middle" font-family="Playfair Display,serif" font-size="10" letter-spacing="8" fill="#2C2018" opacity=".42">YOU ARE INVITED</text>
 
-      <!-- Minimal pine shapes -->
-      <g stroke="#91967F" stroke-width="1" opacity=".35" fill="none">
-        <!-- left pines -->
-        <polyline points="72,580 72,520"/>
-        <polygon points="72,520 54,560 90,560" fill="none"/>
-        <polygon points="72,538 58,568 86,568" fill="none"/>
+      <text x="300" y="316" text-anchor="middle" font-family="Playfair Display,serif" font-size="34" fill="#2C2018" opacity=".88">Mosaic</text>
+      <text x="300" y="348" text-anchor="middle" font-family="Playfair Display,serif" font-size="34" fill="#2C2018" opacity=".88">Collective</text>
 
-        <polyline points="108,580 108,510"/>
-        <polygon points="108,510 88,555 128,555" fill="none"/>
-        <polygon points="108,530 92,565 124,565" fill="none"/>
+      <!-- Ornament divider -->
+      <line x1="222" y1="366" x2="290" y2="366" stroke="#B55832" stroke-width=".6" opacity=".4"/>
+      <circle cx="300" cy="366" r="3" fill="#B55832" opacity=".55"/>
+      <line x1="310" y1="366" x2="378" y2="366" stroke="#B55832" stroke-width=".6" opacity=".4"/>
 
-        <!-- right pines -->
-        <polyline points="492,580 492,520"/>
-        <polygon points="492,520 474,560 510,560" fill="none"/>
-        <polygon points="492,538 478,568 506,568" fill="none"/>
+      <text x="300" y="390" text-anchor="middle" font-family="Jost,sans-serif" font-size="9" letter-spacing="5" fill="#2C2018" opacity=".42">SPRING GATHERING 2024</text>
+      <text x="300" y="412" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="13" letter-spacing="2" fill="#B55832" opacity=".72" font-style="italic">Roanoke, Virginia</text>
 
-        <polyline points="528,580 528,510"/>
-        <polygon points="528,510 508,555 548,555" fill="none"/>
-        <polygon points="528,530 512,565 544,565" fill="none"/>
-      </g>
-
-      <!-- Center wordmark block -->
-      <rect x="218" y="288" width="164" height="64" fill="#EDEDEA" opacity=".85"/>
-      <rect x="218" y="288" width="164" height="64" fill="none" stroke="#91967F" stroke-width=".5" opacity=".35"/>
-      <text x="300" y="314" text-anchor="middle" font-family="Raleway,sans-serif" font-size="16" letter-spacing="8" fill="#2C2C2A" opacity=".8" font-weight="600">DIVERGENT</text>
-      <line x1="238" y1="322" x2="362" y2="322" stroke="#91967F" stroke-width=".4" opacity=".4"/>
-      <text x="300" y="338" text-anchor="middle" font-family="Raleway,sans-serif" font-size="7" letter-spacing="5.5" fill="#91967F" opacity=".7" font-weight="400">CUSTOM APPAREL</text>
-
-      <!-- Elevation labels -->
-      <text x="104" y="476" font-family="Raleway,sans-serif" font-size="7.5" letter-spacing="2.5" fill="#91967F" opacity=".32" font-weight="400">— 4200 ft</text>
-      <text x="104" y="498" font-family="Raleway,sans-serif" font-size="7.5" letter-spacing="2.5" fill="#91967F" opacity=".25" font-weight="400">— 3800 ft</text>
-      <text x="104" y="520" font-family="Raleway,sans-serif" font-size="7.5" letter-spacing="2.5" fill="#91967F" opacity=".18" font-weight="400">— 3400 ft</text>
-
-      <text x="300" y="646" text-anchor="middle" font-family="Raleway,sans-serif" font-size="9" letter-spacing="7" fill="#91967F" opacity=".38" font-weight="400">PNW · EST. 2024</text>
+      <!-- Bottom sage accent -->
+      <rect x="148" y="508" width="304" height="50" fill="#6B8C72" opacity=".14"/>
+      <text x="300" y="539" text-anchor="middle" font-family="Jost,sans-serif" font-size="8.5" letter-spacing="5.5" fill="#6B8C72" opacity=".65">MOSAICCO.COM</text>
     </svg>
   </div>
 </div>
 
-<!-- ═══════════════════ BOARD 04 — EMBER TRAIL ═══════════════════ -->
+<!-- ═══════════════════ BOARD 04 — OBSIDIAN ═══════════════════ -->
 <div class="board b04" id="board-04">
   <div class="binfo">
     <div class="wm-wrap">
-      <svg width="48" height="22" viewBox="0 0 48 22" style="margin-bottom:16px;display:block">
-        <path d="M4,18 Q12,4 24,8 Q36,12 44,4" fill="none" stroke="#D28798" stroke-width="1.2" opacity=".8" stroke-linecap="round"/>
-        <circle cx="4" cy="18" r="2" fill="#D28798" opacity=".7"/>
-        <circle cx="44" cy="4" r="2" fill="#D28798" opacity=".7"/>
-        <circle cx="24" cy="8" r="1.4" fill="#D28798" opacity=".5"/>
+      <svg width="42" height="30" viewBox="0 0 42 30" style="margin-bottom:14px;display:block">
+        <polyline points="4,26 4,10 13,18 21,4 29,18 38,10 38,26" fill="none" stroke="#C9A445" stroke-width="1.1" opacity=".82" stroke-linejoin="round" stroke-linecap="round"/>
+        <line x1="0" y1="26" x2="42" y2="26" stroke="#C9A445" stroke-width=".7" opacity=".48"/>
+        <circle cx="21" cy="4"  r="2.2" fill="#C9A445" opacity=".9"/>
+        <circle cx="4"  cy="10" r="1.6" fill="#C9A445" opacity=".7"/>
+        <circle cx="38" cy="10" r="1.6" fill="#C9A445" opacity=".7"/>
       </svg>
-      <span class="wm">DIVERGENT</span>
-      <div class="tagline">Follow the ember</div>
+      <span class="wm">Mosaic</span>
+      <div class="tagline">An Extraordinary Collective</div>
     </div>
     <div class="pal">
-      <div class="sw"><div class="swb" style="height:48px;background:#1E1008"></div><span class="swn">Char</span></div>
-      <div class="sw"><div class="swb" style="height:40px;background:#D28798"></div><span class="swn">Dusty Rose</span></div>
-      <div class="sw"><div class="swb" style="height:36px;background:#E2725B"></div><span class="swn">Ember</span></div>
-      <div class="sw"><div class="swb" style="height:32px;background:#91967F"></div><span class="swn">Sage</span></div>
-      <div class="sw"><div class="swb" style="height:26px;background:#F5F5DC"></div><span class="swn">Flicker</span></div>
+      <div class="sw"><div class="swb" style="height:48px;background:#0C0B09"></div><span class="swn">Onyx</span></div>
+      <div class="sw"><div class="swb" style="height:40px;background:#C9A445"></div><span class="swn">Burnished Gold</span></div>
+      <div class="sw"><div class="swb" style="height:36px;background:#6B1E2E"></div><span class="swn">Deep Wine</span></div>
+      <div class="sw"><div class="swb" style="height:32px;background:#A87B3A"></div><span class="swn">Bronze</span></div>
+      <div class="sw"><div class="swb" style="height:26px;background:#F5EED8"></div><span class="swn">Ivory</span></div>
     </div>
     <div class="tyrow">
-      <div class="tyeye">Typography — Bebas Neue · Lora Italic</div>
-      <div class="tydemo">The trail remembers</div>
-      <div class="tybody" style="font-family:'Lora',serif;font-style:italic">For the ones who chase last light through the treeline — and bring the wilderness back with them.</div>
+      <div class="tyeye">Typography — DM Serif Display · Cormorant</div>
+      <div class="tydemo">The Collective</div>
+      <div class="tybody" style="font-family:'Cormorant Garamond',serif;font-style:italic">Where the extraordinary becomes the everyday — events as pure theatre, beauty as the only point of entry.</div>
     </div>
-    <div class="div" style="background:rgba(210,135,152,.22)"></div>
+    <div class="div" style="background:rgba(201,164,69,.22)"></div>
     <div class="varea">
       <button class="vbtn" id="vbtn-04" onclick="vote('04')">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg>
@@ -504,78 +454,92 @@ body{font-family:'DM Sans',sans-serif;font-weight:300;background:#1A1A1A;color:#
   <div class="bart">
     <svg width="100%" height="100%" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <radialGradient id="glow04" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#E2725B" stop-opacity=".22"/>
-          <stop offset="60%" stop-color="#D28798" stop-opacity=".06"/>
-          <stop offset="100%" stop-color="#1E1008" stop-opacity="0"/>
-        </radialGradient>
-        <pattern id="pat04" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
-          <line x1="0" y1="15" x2="30" y2="15" stroke="#D28798" stroke-width=".18" opacity=".08"/>
-          <line x1="15" y1="0" x2="15" y2="30" stroke="#D28798" stroke-width=".18" opacity=".08"/>
+        <pattern id="pat04" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+          <line x1="0" y1="0" x2="28" y2="0" stroke="#C9A445" stroke-width=".18" opacity=".1"/>
+          <line x1="0" y1="0" x2="0" y2="28" stroke="#C9A445" stroke-width=".18" opacity=".1"/>
         </pattern>
       </defs>
       <rect width="600" height="700" fill="url(#pat04)"/>
 
-      <!-- Ember glow -->
-      <ellipse cx="300" cy="380" rx="260" ry="200" fill="url(#glow04)"/>
+      <!-- Grand medallion -->
+      <g transform="translate(300,350)">
+        <!-- Outer rings -->
+        <circle r="238" fill="none" stroke="#C9A445" stroke-width=".3" opacity=".1"/>
+        <circle r="224" fill="none" stroke="#C9A445" stroke-width=".5" opacity=".15" stroke-dasharray="6 4"/>
+        <circle r="210" fill="none" stroke="#C9A445" stroke-width=".4" opacity=".12"/>
 
-      <!-- Moon / sun disc -->
-      <circle cx="300" cy="250" r="88" fill="#D28798" opacity=".1"/>
-      <circle cx="300" cy="250" r="72" fill="#D28798" opacity=".12"/>
-      <circle cx="300" cy="250" r="55" fill="#E2725B" opacity=".18"/>
-      <circle cx="300" cy="250" r="38" fill="#E2725B" opacity=".22"/>
-      <circle cx="300" cy="250" r="22" fill="#D28798" opacity=".55"/>
+        <!-- 12 radiating spokes -->
+        <g stroke="#C9A445" stroke-width=".5" opacity=".22">
+          <line x1="0"    y1="-210" x2="0"    y2="-148"/>
+          <line x1="105"  y1="-182" x2="74"   y2="-128"/>
+          <line x1="182"  y1="-105" x2="128"  y2="-74"/>
+          <line x1="210"  y1="0"    x2="148"  y2="0"/>
+          <line x1="182"  y1="105"  x2="128"  y2="74"/>
+          <line x1="105"  y1="182"  x2="74"   y2="128"/>
+          <line x1="0"    y1="210"  x2="0"    y2="148"/>
+          <line x1="-105" y1="182"  x2="-74"  y2="128"/>
+          <line x1="-182" y1="105"  x2="-128" y2="74"/>
+          <line x1="-210" y1="0"    x2="-148" y2="0"/>
+          <line x1="-182" y1="-105" x2="-128" y2="-74"/>
+          <line x1="-105" y1="-182" x2="-74"  y2="-128"/>
+        </g>
 
-      <!-- Ornate outer ring -->
-      <circle cx="300" cy="250" r="108" fill="none" stroke="#D28798" stroke-width=".6" opacity=".25" stroke-dasharray="4 5"/>
-      <circle cx="300" cy="250" r="120" fill="none" stroke="#D28798" stroke-width=".3" opacity=".15"/>
+        <!-- 12-point star outer -->
+        <polygon points="0,-148 10,-52 74,-128 36,-18 128,-74 52,-10 148,0 52,10 128,74 36,18 74,128 10,52 0,148 -10,52 -74,128 -36,18 -128,74 -52,10 -148,0 -52,-10 -128,-74 -36,-18 -74,-128 -10,-52" fill="none" stroke="#C9A445" stroke-width="1" opacity=".3"/>
 
-      <!-- 8 small diamonds on orbit -->
-      <g fill="#D28798" opacity=".45">
-        <polygon points="300,138 304,142 300,146 296,142"/>
-        <polygon points="376,174 380,178 376,182 372,178"/>
-        <polygon points="408,250 412,254 408,258 404,254"/>
-        <polygon points="376,326 380,330 376,334 372,330"/>
-        <polygon points="300,354 304,358 300,362 296,358"/>
-        <polygon points="224,326 228,330 224,334 220,330"/>
-        <polygon points="192,250 196,254 192,258 188,254"/>
-        <polygon points="224,174 228,178 224,182 220,178"/>
+        <!-- Wine accent diamonds (cardinal) -->
+        <g fill="#6B1E2E" opacity=".55">
+          <polygon points="0,-158 6,-148 0,-138 -6,-148"/>
+          <polygon points="158,0 148,6 138,0 148,-6"/>
+          <polygon points="0,158 6,148 0,138 -6,148"/>
+          <polygon points="-158,0 -148,6 -138,0 -148,-6"/>
+        </g>
+
+        <!-- Middle ring -->
+        <circle r="110" fill="none" stroke="#C9A445" stroke-width=".8" opacity=".25"/>
+        <!-- 8-point star inner -->
+        <polygon points="0,-94 12,-34 66,-66 34,-12 94,0 34,12 66,66 12,34 0,94 -12,34 -66,66 -34,12 -94,0 -34,-12 -66,-66 -12,-34" fill="#C9A445" opacity=".1"/>
+        <polygon points="0,-94 12,-34 66,-66 34,-12 94,0 34,12 66,66 12,34 0,94 -12,34 -66,66 -34,12 -94,0 -34,-12 -66,-66 -12,-34" fill="none" stroke="#C9A445" stroke-width="1.2" opacity=".38"/>
+
+        <!-- Inner glow ring -->
+        <circle r="62" fill="#C9A445" opacity=".06"/>
+        <circle r="60" fill="none" stroke="#C9A445" stroke-width="1.5" opacity=".45"/>
+
+        <!-- Wine accent ring -->
+        <circle r="48" fill="none" stroke="#6B1E2E" stroke-width="2.5" opacity=".25"/>
+
+        <!-- Core star -->
+        <polygon points="0,-44 12,-12 44,0 12,12 0,44 -12,12 -44,0 -12,-12" fill="#C9A445" opacity=".25"/>
+        <polygon points="0,-44 12,-12 44,0 12,12 0,44 -12,12 -44,0 -12,-12" fill="none" stroke="#C9A445" stroke-width="1" opacity=".55"/>
+
+        <circle r="20" fill="#C9A445" opacity=".18"/>
+        <circle r="13" fill="#C9A445" opacity=".32"/>
+        <circle r="7"  fill="#C9A445" opacity=".65"/>
+        <circle r="3"  fill="#C9A445" opacity=".92"/>
       </g>
 
-      <!-- Dark mountain foreground -->
-      <polygon points="0,700 0,500 100,360 200,480 300,300 400,470 500,350 600,490 600,700" fill="#1A0D06"/>
-
-      <!-- Pine silhouettes (dark) -->
-      <g fill="#130A04">
-        <polygon points="30,700 48,648 66,700"/>
-        <polygon points="38,666 48,628 58,666"/>
-        <polygon points="60,700 80,644 100,700"/>
-        <polygon points="70,668 80,634 90,668"/>
-        <polygon points="95,700 113,650 131,700"/>
-        <polygon points="103,671 113,642 123,671"/>
-
-        <polygon points="469,700 490,647 511,700"/>
-        <polygon points="479,668 490,635 501,668"/>
-        <polygon points="505,700 524,648 543,700"/>
-        <polygon points="514,668 524,634 534,668"/>
-        <polygon points="538,700 555,652 572,700"/>
-        <polygon points="546,672 555,645 564,672"/>
+      <!-- Corner brackets -->
+      <g stroke="#C9A445" stroke-width=".6" fill="#C9A445" opacity=".3">
+        <g transform="translate(58,58)">
+          <line x1="0" y1="0" x2="36" y2="0"/><line x1="0" y1="0" x2="0" y2="36"/>
+          <circle r="2.5"/>
+        </g>
+        <g transform="translate(542,58)">
+          <line x1="0" y1="0" x2="-36" y2="0"/><line x1="0" y1="0" x2="0" y2="36"/>
+          <circle r="2.5"/>
+        </g>
+        <g transform="translate(58,642)">
+          <line x1="0" y1="0" x2="36" y2="0"/><line x1="0" y1="0" x2="0" y2="-36"/>
+          <circle r="2.5"/>
+        </g>
+        <g transform="translate(542,642)">
+          <line x1="0" y1="0" x2="-36" y2="0"/><line x1="0" y1="0" x2="0" y2="-36"/>
+          <circle r="2.5"/>
+        </g>
       </g>
 
-      <!-- Dusty rose smoke wisps -->
-      <g fill="none" stroke="#D28798" stroke-width=".8" opacity=".15">
-        <path d="M250,460 Q260,440 255,418 Q250,396 265,378"/>
-        <path d="M300,470 Q315,448 308,424 Q301,400 318,380"/>
-        <path d="M350,462 Q362,440 355,416 Q348,392 366,372"/>
-      </g>
-
-      <!-- Wordmark overlay -->
-      <text x="300" y="256" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="18" letter-spacing="7" fill="#FAFAF8" opacity=".75">DIVERGENT</text>
-
-      <!-- Corner text marks -->
-      <text x="56" y="640" font-family="Lora,serif" font-size="8" letter-spacing="2" fill="#D28798" opacity=".28" font-style="italic">Apparel</text>
-      <text x="544" y="640" text-anchor="end" font-family="Lora,serif" font-size="8" letter-spacing="2" fill="#D28798" opacity=".28" font-style="italic">PNW</text>
-      <text x="300" y="654" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="9" letter-spacing="6" fill="#D28798" opacity=".3">CUSTOM APPAREL</text>
+      <text x="300" y="614" text-anchor="middle" font-family="DM Serif Display,serif" font-size="11" letter-spacing="6" fill="#C9A445" opacity=".32">MOSAIC COLLECTIVE</text>
+      <text x="300" y="633" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="9" letter-spacing="5" fill="#F5EED8" opacity=".18" font-style="italic">Roanoke · Virginia</text>
     </svg>
   </div>
 </div>
@@ -583,10 +547,10 @@ body{font-family:'DM Sans',sans-serif;font-weight:300;background:#1A1A1A;color:#
 </div><!-- /stage -->
 
 <nav class="nav">
-  <button class="nbtn active" data-id="01" onclick="show('01',this)"><span class="n">01</span><span>The Summit</span></button>
-  <button class="nbtn" data-id="02" onclick="show('02',this)"><span class="n">02</span><span>Trail Light</span></button>
-  <button class="nbtn" data-id="03" onclick="show('03',this)"><span class="n">03</span><span>High Sage</span></button>
-  <button class="nbtn" data-id="04" onclick="show('04',this)"><span class="n">04</span><span>Ember Trail</span></button>
+  <button class="nbtn active" data-id="01" onclick="show('01',this)"><span class="n">01</span><span>The Golden Age</span></button>
+  <button class="nbtn" data-id="02" onclick="show('02',this)"><span class="n">02</span><span>Saffron Hour</span></button>
+  <button class="nbtn" data-id="03" onclick="show('03',this)"><span class="n">03</span><span>Tierra</span></button>
+  <button class="nbtn" data-id="04" onclick="show('04',this)"><span class="n">04</span><span>Obsidian</span></button>
 </nav>
 
 <script>
@@ -613,6 +577,7 @@ function vote(id){
   },1800);
 }
 
+// Keyboard nav
 document.addEventListener('keydown',e=>{
   if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
     const ids=['01','02','03','04'];
