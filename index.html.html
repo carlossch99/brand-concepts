@@ -30,7 +30,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 /* Custom Scrollbars for Panels */
 .binfo::-webkit-scrollbar, .bart::-webkit-scrollbar { width: 6px; }
 .binfo::-webkit-scrollbar-thumb, .bart::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.15); border-radius: 10px; }
-.b04 .binfo::-webkit-scrollbar-thumb, .b04 .bart::-webkit-scrollbar-thumb { background-color: rgba(255,255,255,0.15); }
+.b04 .bart::-webkit-scrollbar-thumb { background-color: rgba(255,255,255,0.15); } /* Light scrollbar only for dark art panel */
 
 /* Wordmark */
 .wm-wrap{margin-bottom:36px}
@@ -102,24 +102,27 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 /* ======================== 03 — MED CABANA ======================== */
 .b03 .binfo { background: #F4EFE6; color: #214A7D; border: 12px solid #214A7D; }
 .b03 .bart { background: #D45C3E; }
-.b03 .wm { font-family: 'DM Serif Display', serif; font-size: 60px; letter-spacing: .08em; font-weight: 400; text-transform: uppercase; }
-.b03 .tagline { color: #214A7D; }
+.b03 .wm { font-family: 'DM Serif Display', serif; font-size: 60px; letter-spacing: .08em; font-weight: 400; text-transform: uppercase; color: #214A7D; }
+.b03 .tagline { color: rgba(33, 74, 125, .7); }
+.b03 .tydemo { font-family:'DM Serif Display', serif; color:#D45C3E; font-size: 28px; }
 .b03 .tybody { font-family: 'Jost', sans-serif; color: #214A7D;}
 .b03 .vbtn { border: 1px solid #214A7D; color: #214A7D; }
 .b03 .vbtn:hover, .b03 .vbtn.voted { background: #214A7D; color: #F4EFE6; }
-.b03 .swn { color: #214A7D; }
+.b03 .swn, .b03 .tyeye, .b03 .vinfo { color: #214A7D; }
 .cabana-gallery { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-auto-rows: 1fr; gap: 16px; width: 100%; height: 100%; }
 .cabana-img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; box-shadow: 0 8px 24px rgba(33, 74, 125, 0.25); }
 
 /* ======================== 04 — NOCTURNAL EDEN ======================== */
-.b04 .binfo { background: #080A09; color: #E8D8C8; border: 12px solid #0A1210; }
+.b04 .binfo { background: #E8D8C8; color: #0A1210; border: 12px solid #0A1210; }
 .b04 .bart { background: #141A18; }
-.b04 .wm { font-family: 'DM Serif Display', serif; font-size: 60px; letter-spacing: .08em; text-transform: uppercase; }
-.b04 .tagline { color: #CBA365; }
-.b04 .tybody { font-family: 'Jost', sans-serif; color: #E8D8C8;}
-.b04 .vbtn { border: 1px solid #CBA365; color: #CBA365; }
-.b04 .vbtn:hover, .b04 .vbtn.voted { background: #CBA365; color: #080A09; }
-.b04 .swn { color: #CBA365; }
+.b04 .wm { font-family: 'DM Serif Display', serif; font-size: 60px; letter-spacing: .08em; text-transform: uppercase; color: #0A1210;}
+.b04 .tagline { color: rgba(10, 18, 16, 0.7); }
+.b04 .tydemo { font-family: 'DM Serif Display', serif; font-size: 28px; color: #0A1210; font-weight: 600;}
+.b04 .tybody { font-family: 'Jost', sans-serif; color: rgba(10, 18, 16, 0.8);}
+.b04 .vbtn { border: 1px solid #0A1210; color: #0A1210; }
+.b04 .vbtn:hover, .b04 .vbtn.voted { background: #0A1210; color: #E8D8C8; }
+.b04 .swn, .b04 .tyeye, .b04 .vinfo { color: #0A1210; }
+.b04 .div { background: #0A1210; opacity: 0.3;}
 .eden-gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 16px; width: 100%; height: 100%; }
 .eden-img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); }
 .eden-hero { grid-column: span 2; grid-row: span 2; }
@@ -128,9 +131,9 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 .b05 .binfo { background: #F2EBE1; color: #3B2818; border: 12px solid #3B2818; }
 .b05 .bart { background: #DDA750; }
 .b05 .wm { font-family: 'DM Serif Display', serif; font-size: 56px; letter-spacing: .08em; text-transform: uppercase; color: #AD5233; }
-.b05 .tagline { color: #3B2818; }
+.b05 .tagline { color: rgba(59, 40, 24, .7); }
 .b05 .tydemo { font-family: 'DM Serif Display', serif; font-size: 28px; color: #3B2818; font-weight: 600;}
-.b05 .tybody { color: #3B2818; font-family: 'Jost', sans-serif; }
+.b05 .tybody { color: rgba(59, 40, 24, .8); font-family: 'Jost', sans-serif; }
 .b05 .vbtn { border: 1px solid #AD5233; color: #AD5233; }
 .b05 .vbtn:hover, .b05 .vbtn.voted { background: #AD5233; color: #F2EBE1; }
 .b05 .swn, .b05 .tyeye, .b05 .vinfo { color: #3B2818; }
@@ -232,7 +235,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
     </div>
     <div class="tyrow">
       <div class="tyeye">Typography — Antiqued Serif & Script</div>
-      <div class="tydemo" style="font-family:'Cormorant Garamond', serif; font-style:italic;">The Global Oasis</div>
+      <div class="tydemo">The Global Oasis</div>
       <div class="tybody">A highly detailed, narrative-driven design style. It blends worldly motifs with an expensive, boutique hospitality feel.</div>
     </div>
     <div class="div"></div>
@@ -256,7 +259,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 <div class="board b03" id="board-03">
   <div class="binfo">
     <div class="wm-wrap">
-      <span class="wm" style="color: #214A7D;">Cabana</span>
+      <span class="wm">Cabana</span>
       <div class="tagline">Retro · Coastal · Vibrant</div>
     </div>
     <div class="pal">
@@ -265,17 +268,17 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
       <div class="sw"><div class="swb" style="background:#F4EFE6; height:36px"></div><div class="swn">Cabana Cream</div></div>
     </div>
     <div class="tyrow">
-      <div class="tyeye" style="color: #214A7D;">Typography — Retro Serif</div>
-      <div class="tydemo" style="font-family:'DM Serif Display', serif; color:#D45C3E;">Euro-Summer Resort</div>
+      <div class="tyeye">Typography — Retro Serif</div>
+      <div class="tydemo">Euro-Summer Resort</div>
       <div class="tybody">A lively, sun-drenched aesthetic blending European resort nostalgia with punchy, bold contrasts and playful stripes.</div>
     </div>
-    <div class="div" style="background: #214A7D; opacity: .3;"></div>
+    <div class="div"></div>
     <div class="varea">
       <button class="vbtn" id="vbtn-03" onclick="vote('03')">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg>
         Vote for this direction
       </button>
-      <span class="vinfo" id="vinfo-03" style="color: #214A7D;">0 votes</span>
+      <span class="vinfo" id="vinfo-03">0 votes</span>
     </div>
   </div>
   <div class="bart">
@@ -293,26 +296,27 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 <div class="board b04" id="board-04">
   <div class="binfo">
     <div class="wm-wrap">
-      <span class="wm" style="color: #CBA365;">Eden</span>
+      <span class="wm">Eden</span>
       <div class="tagline">Midnight · Opulent · Exotic</div>
     </div>
     <div class="pal">
       <div class="sw"><div class="swb" style="background:#0A1210; height:48px"></div><div class="swn">Midnight Forest</div></div>
       <div class="sw"><div class="swb" style="background:#4A1C1C; height:40px"></div><div class="swn">Oxblood</div></div>
       <div class="sw"><div class="swb" style="background:#CBA365; height:36px"></div><div class="swn">Antique Brass</div></div>
+      <div class="sw"><div class="swb" style="background:#E8D8C8; height:32px"></div><div class="swn">Eden Cream</div></div>
     </div>
     <div class="tyrow">
-      <div class="tyeye" style="color: #CBA365;">Typography — Dramatic Serif</div>
-      <div class="tydemo" style="font-family:'DM Serif Display', serif; color:#E8D8C8;">Nocturnal Eden</div>
+      <div class="tyeye">Typography — Dramatic Serif</div>
+      <div class="tydemo">Nocturnal Eden</div>
       <div class="tybody">A moody, highly opulent aesthetic. Perfect for exclusive, high-end evening events featuring velvet drapes, candlelit tables, and exotic botanicals.</div>
     </div>
-    <div class="div" style="background: #CBA365; opacity: .3;"></div>
+    <div class="div"></div>
     <div class="varea">
       <button class="vbtn" id="vbtn-04" onclick="vote('04')">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg>
         Vote for this direction
       </button>
-      <span class="vinfo" id="vinfo-04" style="color: #CBA365;">0 votes</span>
+      <span class="vinfo" id="vinfo-04">0 votes</span>
     </div>
   </div>
   <div class="bart">
@@ -339,8 +343,8 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
       <div class="sw"><div class="swb" style="background:#F2EBE1; height:32px"></div><div class="swn">Canvas Cream</div></div>
     </div>
     <div class="tyrow">
-      <div class="tyeye" style="color: #AD5233;">Typography — Rugged Display & Warm Sans</div>
-      <div class="tydemo" style="font-family:'DM Serif Display', serif; color:#3B2818;">Rustic Hearth</div>
+      <div class="tyeye">Typography — Rugged Display & Warm Sans</div>
+      <div class="tydemo">Rustic Hearth</div>
       <div class="tybody">Earthy, unpretentious, and deeply authentic. Feels like a farm-to-table dinner party or an upscale outdoor market celebrating community.</div>
     </div>
     <div class="div"></div>
@@ -349,7 +353,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg>
         Vote for this direction
       </button>
-      <span class="vinfo" id="vinfo-05" style="color: #3B2818;">0 votes</span>
+      <span class="vinfo" id="vinfo-05">0 votes</span>
     </div>
   </div>
   <div class="bart">
