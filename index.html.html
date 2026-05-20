@@ -59,7 +59,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 .nbtn .n{font-size:20px;font-weight:300;font-family:'Cormorant Garamond',serif;line-height:1}
 .nbtn[data-id="01"].active{color:#A3B18A;background:rgba(163,177,138,.05)}
 .nbtn[data-id="02"].active{color:#D4891A;background:rgba(212,137,26,.04)}
-.nbtn[data-id="03"].active{color:#B55832;background:rgba(181,88,50,.04)}
+.nbtn[data-id="03"].active{color:#214A7D;background:rgba(33,74,125,.06)}
 .nbtn[data-id="04"].active{color:#C9A445;background:rgba(201,164,69,.04)}
 
 /* ======================== 01 — NOSTALGIC RIVIERA ======================== */
@@ -195,18 +195,54 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 }
 
 /* ======================== 03 — TIERRA ======================== */
-.b03 .binfo{background:#F0E0C8;color:#2C2018}
-.b03 .bart{background:#E5D0B2}
-.b03 .wm{font-family:'Playfair Display',serif;font-size:52px;letter-spacing:.35em;color:#2C2018;font-weight:400}
-.b03 .tagline{color:rgba(44,32,24,.38)}
-.b03 .tydemo{font-family:'Playfair Display',serif;font-size:26px;letter-spacing:.1em;color:#B55832}
-.b03 .tybody{font-size:13px;color:rgba(44,32,24,.52);letter-spacing:.03em}
-.b03 .vbtn{border:1px solid #B55832;color:#B55832}
-.b03 .vbtn:hover,.b03 .vbtn.voted{background:#B55832;color:#F0E0C8}
-.b03 .swn{color:#2C2018}
-.b03 .tyeye{color:#2C2018;opacity:.35}
-.b03 .vinfo{color:#2C2018;opacity:.32}
-.b03 .div{background:#2C2018}
+/* ======================== 03 — MEDITERRANEAN CABANA ======================== */
+.b03 .binfo {
+  background: #F4EFE6; /* Cabana Cream */
+  color: #214A7D; /* Cobalt Blue */
+  border: 12px solid #214A7D; 
+}
+.b03 .bart {
+  background: #D45C3E; /* Spritz Orange */
+  padding: 30px;
+}
+.b03 .wm {
+  font-family: 'DM Serif Display', serif;
+  font-size: 60px;
+  letter-spacing: .08em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.b03 .tybody {
+  font-family: 'Jost', sans-serif;
+}
+.b03 .vbtn {
+  border: 1px solid #214A7D;
+  color: #214A7D;
+}
+.b03 .vbtn:hover, .b03 .vbtn.voted {
+  background: #214A7D;
+  color: #F4EFE6;
+}
+.b03 .swn {
+  color: #214A7D;
+}
+
+/* 6-Image Grid Styles */
+.cabana-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns to perfectly fit 6 images */
+  grid-auto-rows: 1fr;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+}
+.cabana-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(33, 74, 125, 0.25);
+}
 
 /* ======================== 04 — OBSIDIAN ======================== */
 .b04 .binfo{background:#0C0B09;color:#F5EED8}
@@ -227,7 +263,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
   <div class="hdr-right">
     <div class="tally"><div class="tdot" style="background:#1B3022"></div><span>Nostalgic Riviera</span><span class="tcnt" id="cnt-01">0</span></div>
     <div class="tally"><div class="tdot" style="background:#D4891A"></div><span>Global Oasis</span><span class="tcnt" id="cnt-02">0</span></div>
-    <div class="tally"><div class="tdot" style="background:#B55832"></div><span>Tierra</span><span class="tcnt" id="cnt-03">0</span></div>
+    <div class="tally"><div class="tdot" style="background:#214A7D"></div><span>Med Cabana</span><span class="tcnt" id="cnt-03">0</span></div>
     <div class="tally"><div class="tdot" style="background:#C9A445"></div><span>Obsidian</span><span class="tcnt" id="cnt-04">0</span></div>
   </div>
 </header>
@@ -312,83 +348,46 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
     </div>
   </div>
 </div>
-  
-<div class="board b03" id="board-03">
+
+  <div class="board b03" id="board-03">
   <div class="binfo">
     <div class="wm-wrap">
-      <svg width="34" height="34" viewBox="0 0 34 34" style="margin-bottom:14px;display:block">
-        <rect x="3"  y="3"  width="13" height="13" fill="#B55832" opacity=".9"/>
-        <rect x="18" y="3"  width="13" height="13" fill="#B55832" opacity=".5"/>
-        <rect x="3"  y="18" width="13" height="13" fill="#B55832" opacity=".5"/>
-        <rect x="18" y="18" width="13" height="13" fill="#6B8C72" opacity=".55"/>
-        <rect x="7"  y="7"  width="20" height="20" fill="none" stroke="#B55832" stroke-width=".5" opacity=".35"/>
-      </svg>
-      <span class="wm">MOSAIC</span>
-      <div class="tagline">Hand-Curated · Deeply Human</div>
+      <span class="wm" style="color: #214A7D;">Cabana</span>
+      <div class="tagline" style="color: rgba(33, 74, 125, .6);">Retro · Coastal · Vibrant</div>
     </div>
+    
     <div class="pal">
-      <div class="sw"><div class="swb" style="height:48px;background:#2C2018"></div><span class="swn">Charcoal</span></div>
-      <div class="sw"><div class="swb" style="height:40px;background:#B55832"></div><span class="swn">Terracotta</span></div>
-      <div class="sw"><div class="swb" style="height:36px;background:#6B8C72"></div><span class="swn">Sage</span></div>
-      <div class="sw"><div class="swb" style="height:32px;background:#E8C98A"></div><span class="swn">Sand</span></div>
-      <div class="sw"><div class="swb" style="height:26px;background:#F0E0C8"></div><span class="swn">Cream</span></div>
+      <div class="sw"><div class="swb" style="background:#214A7D; height:48px"></div><div class="swn">Cobalt Blue</div></div>
+      <div class="sw"><div class="swb" style="background:#D45C3E; height:40px"></div><div class="swn">Spritz Orange</div></div>
+      <div class="sw"><div class="swb" style="background:#F4EFE6; height:36px"></div><div class="swn">Cabana Cream</div></div>
     </div>
+    
     <div class="tyrow">
-      <div class="tyeye">Typography — Playfair Display · Jost</div>
-      <div class="tydemo">The Art of Gathering</div>
-      <div class="tybody">Rooted in craft and warmth — experiences designed by hand, for people who live beautifully and gather with intention.</div>
+      <div class="tyeye" style="color: #214A7D; opacity: .5;">Typography — Retro Serif & Breezy Script</div>
+      <div class="tydemo" style="font-family:'DM Serif Display', serif; color:#D45C3E;">Euro-Summer Resort</div>
+      <div class="tybody" style="color: rgba(33, 74, 125, .8);">A lively, sun-drenched aesthetic blending European resort nostalgia with punchy, bold contrasts and playful stripes.</div>
     </div>
-    <div class="div"></div>
+    
+    <div class="div" style="background: #214A7D; opacity: .2;"></div>
+    
     <div class="varea">
       <button class="vbtn" id="vbtn-03" onclick="vote('03')">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg>
         Vote for this direction
       </button>
-      <span class="vinfo" id="vinfo-03">0 votes</span>
+      <span class="vinfo" id="vinfo-03" style="color: #214A7D;">0 votes</span>
     </div>
   </div>
+  
   <div class="bart">
-    <svg width="100%" height="100%" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="pat03" x="0" y="0" width="56" height="56" patternUnits="userSpaceOnUse">
-          <rect x="10" y="10" width="36" height="36" transform="rotate(45 28 28)" fill="#B55832" opacity=".1"/>
-          <rect x="10" y="10" width="36" height="36" transform="rotate(45 28 28)" fill="none" stroke="#B55832" stroke-width=".5" opacity=".22"/>
-          <line x1="28" y1="0" x2="28" y2="56" stroke="#B55832" stroke-width=".3" opacity=".1"/>
-          <line x1="0" y1="28" x2="56" y2="28" stroke="#B55832" stroke-width=".3" opacity=".1"/>
-          <circle cx="28" cy="28" r="1.8" fill="#B55832" opacity=".25"/>
-          <circle cx="0"  cy="0"  r="1.2" fill="#B55832" opacity=".18"/>
-          <circle cx="56" cy="0"  r="1.2" fill="#B55832" opacity=".18"/>
-          <circle cx="0"  cy="56" r="1.2" fill="#B55832" opacity=".18"/>
-          <circle cx="56" cy="56" r="1.2" fill="#B55832" opacity=".18"/>
-        </pattern>
-      </defs>
-      <rect width="600" height="700" fill="url(#pat03)"/>
-      <filter id="shd"><feDropShadow dx="4" dy="6" stdDeviation="8" flood-color="#8B4A28" flood-opacity=".2"/></filter>
-      <rect x="148" y="138" width="304" height="420" rx="3" fill="#F0E0C8" filter="url(#shd)"/>
-      <rect x="158" y="148" width="284" height="400" rx="2" fill="none" stroke="#B55832" stroke-width=".6" opacity=".25"/>
-      <rect x="148" y="138" width="304" height="88" rx="3" fill="#B55832"/>
-      <rect x="148" y="222" width="304" height="5" fill="#6B8C72"/>
-      <rect x="148" y="227" width="304" height="2.5" fill="#E8C98A" opacity=".7"/>
-      <g fill="rgba(240,224,200,.22)" transform="translate(148,138)">
-        <rect x="18" y="14" width="16" height="16" transform="rotate(45 26 22)"/>
-        <rect x="60" y="14" width="16" height="16" transform="rotate(45 68 22)"/>
-        <rect x="102" y="14" width="16" height="16" transform="rotate(45 110 22)"/>
-        <rect x="144" y="14" width="16" height="16" transform="rotate(45 152 22)"/>
-        <rect x="186" y="14" width="16" height="16" transform="rotate(45 194 22)"/>
-        <rect x="228" y="14" width="16" height="16" transform="rotate(45 236 22)"/>
-        <rect x="270" y="14" width="16" height="16" transform="rotate(45 278 22)"/>
-      </g>
-      <text x="300" y="280" text-anchor="middle" font-family="Playfair Display,serif" font-size="10" letter-spacing="8" fill="#2C2018" opacity=".42">YOU ARE INVITED</text>
-      <text x="300" y="316" text-anchor="middle" font-family="Playfair Display,serif" font-size="34" fill="#2C2018" opacity=".88">Mosaic</text>
-      <text x="300" y="348" text-anchor="middle" font-family="Playfair Display,serif" font-size="34" fill="#2C2018" opacity=".88">Collective</text>
-      <line x1="222" y1="366" x2="290" y2="366" stroke="#B55832" stroke-width=".6" opacity=".4"/>
-      <circle cx="300" cy="366" r="3" fill="#B55832" opacity=".55"/>
-      <line x1="310" y1="366" x2="378" y2="366" stroke="#B55832" stroke-width=".6" opacity=".4"/>
-      <text x="300" y="390" text-anchor="middle" font-family="Jost,sans-serif" font-size="9" letter-spacing="5" fill="#2C2018" opacity=".42">SPRING GATHERING 2024</text>
-      <text x="300" y="412" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="13" letter-spacing="2" fill="#B55832" opacity=".72" font-style="italic">Roanoke, Virginia</text>
-      <rect x="148" y="508" width="304" height="50" fill="#6B8C72" opacity=".14"/>
-      <text x="300" y="539" text-anchor="middle" font-family="Jost,sans-serif" font-size="8.5" letter-spacing="5.5" fill="#6B8C72" opacity=".65">MOSAICCO.COM</text>
-    </svg>
+    <div class="cabana-gallery">
+      <img src="la-boho.jpg" alt="La Boho Ocean Newspaper" class="cabana-img">
+      <img src="lobster-lab.jpg" alt="Lobster Lab Branding" class="cabana-img">
+      <img src="palm-beach.jpg" alt="Palm Beach Door Hanger" class="cabana-img">
+      <img src="santa-rosa.jpg" alt="Santa Rosa Postcards" class="cabana-img">
+      <img src="benzao-cafe.jpg" alt="Benzao Cafe Tiles" class="cabana-img">
+      <img src="mio-tesoro.jpg" alt="Mio Tesoro Arch Postcard" class="cabana-img">
+    </div>
   </div>
 </div>
 
@@ -500,7 +499,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 </div><nav class="nav">
   <button class="nbtn active" data-id="01" onclick="show('01',this)"><span class="n">01</span><span>Nostalgic Riviera</span></button>
   <button class="nbtn" data-id="02" onclick="show('02',this)"><span class="n">02</span><span>Global Oasis</span></button>
-  <button class="nbtn" data-id="03" onclick="show('03',this)"><span class="n">03</span><span>Tierra</span></button>
+  <button class="nbtn" data-id="03" onclick="show('03',this)"><span class="n">03</span><span>Med Cabana</span></button>
   <button class="nbtn" data-id="04" onclick="show('04',this)"><span class="n">04</span><span>Obsidian</span></button>
 </nav>
 
