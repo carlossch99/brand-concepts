@@ -57,21 +57,79 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 .nbtn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:none;color:rgba(245,237,216,.28);cursor:pointer;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;transition:color .3s,background .3s;position:relative}
 .nbtn:not(:last-child)::after{content:'';position:absolute;right:0;top:14px;bottom:14px;width:.5px;background:rgba(255,255,255,.08)}
 .nbtn .n{font-size:20px;font-weight:300;font-family:'Cormorant Garamond',serif;line-height:1}
-.nbtn[data-id="01"].active{color:#C4A24A;background:rgba(196,162,74,.04)}
+.nbtn[data-id="01"].active{color:#A3B18A;background:rgba(163,177,138,.05)}
 .nbtn[data-id="02"].active{color:#D4891A;background:rgba(212,137,26,.04)}
 .nbtn[data-id="03"].active{color:#B55832;background:rgba(181,88,50,.04)}
 .nbtn[data-id="04"].active{color:#C9A445;background:rgba(201,164,69,.04)}
 
-/* ======================== 01 — THE GOLDEN AGE ======================== */
-.b01 .binfo{background:#142014;color:#F4ECD5}
-.b01 .bart{background:#192A1A}
-.b01 .wm{font-family:'Cinzel',serif;font-size:56px;letter-spacing:.2em;color:#C4A24A;font-weight:600}
-.b01 .tagline,.b01 .vinfo{color:rgba(244,236,213,.4)}
-.b01 .tydemo{font-family:'Cinzel',serif;font-size:24px;letter-spacing:.14em;color:#C4A24A}
-.b01 .tybody{font-family:'Cormorant Garamond',serif;font-size:14px;color:rgba(244,236,213,.58)}
-.b01 .vbtn{border:1px solid #C4A24A;color:#C4A24A}
-.b01 .vbtn:hover,.b01 .vbtn.voted{background:#C4A24A;color:#142014}
-.b01 .swn,.b01 .tyeye{color:#F4ECD5}
+/* ======================== 01 — NOSTALGIC RIVIERA ======================== */
+.b01 .binfo { 
+  background: #F9F7F1; 
+  color: #1B3022; 
+  border: 12px solid #1B3022; 
+} 
+.b01 .bart { 
+  background: #A3B18A; 
+  padding: 40px;
+} 
+.b01 .wm { 
+  font-family: 'Playfair Display', serif; 
+  font-size: 52px; 
+  letter-spacing: .12em; 
+  color: #1B3022; 
+  font-weight: 600; 
+  text-transform: uppercase;
+}
+.b01 .tagline { 
+  color: rgba(27, 48, 34, .5); 
+} 
+.b01 .tydemo { 
+  font-family: 'Playfair Display', serif; 
+  font-size: 26px; 
+  letter-spacing: .1em; 
+  color: #1B3022; 
+  font-weight: 500; 
+}
+.b01 .tybody { 
+  color: rgba(27, 48, 34, .7); 
+  letter-spacing: .02em; 
+  font-family: 'Jost', sans-serif;
+} 
+.b01 .vbtn { 
+  border: 1px solid #1B3022; 
+  color: #1B3022; 
+} 
+.b01 .vbtn:hover, .b01 .vbtn.voted { 
+  background: #1B3022; 
+  color: #F9F7F1; 
+} 
+.b01 .swn, .b01 .tyeye, .b01 .vinfo { 
+  color: #1B3022; 
+}
+.b01 .div {
+  background: #1B3022;
+}
+
+/* Photo Gallery Grid Styles */
+.riviera-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+.riviera-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 8px 24px rgba(27, 48, 34, 0.15);
+}
+.img-wide {
+  grid-column: span 2;
+  object-position: center 20%;
+}
 
 /* ======================== 02 — SAFFRON HOUR ======================== */
 .b02 .binfo{background:#19140F;color:#F6EDD6}
@@ -115,7 +173,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 <header class="hdr">
   <span class="hdr-brand">Mosaic — Brand Identity Review · May 20, 2026</span>
   <div class="hdr-right">
-    <div class="tally"><div class="tdot" style="background:#C4A24A"></div><span>Golden Age</span><span class="tcnt" id="cnt-01">0</span></div>
+    <div class="tally"><div class="tdot" style="background:#1B3022"></div><span>Nostalgic Riviera</span><span class="tcnt" id="cnt-01">0</span></div>
     <div class="tally"><div class="tdot" style="background:#D4891A"></div><span>Saffron Hour</span><span class="tcnt" id="cnt-02">0</span></div>
     <div class="tally"><div class="tdot" style="background:#B55832"></div><span>Tierra</span><span class="tcnt" id="cnt-03">0</span></div>
     <div class="tally"><div class="tdot" style="background:#C9A445"></div><span>Obsidian</span><span class="tcnt" id="cnt-04">0</span></div>
@@ -124,32 +182,27 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 
 <div class="stage">
 
-<!-- ═══════════════════ BOARD 01 — THE GOLDEN AGE ═══════════════════ -->
 <div class="board b01 active" id="board-01">
   <div class="binfo">
     <div class="wm-wrap">
-      <svg width="32" height="32" viewBox="0 0 32 32" style="margin-bottom:14px;display:block">
-        <rect x="16" y="1" width="10" height="10" transform="rotate(45 16 6)" fill="#C4A24A" opacity=".85"/>
-        <rect x="16" y="1" width="10" height="10" transform="rotate(45 16 6)" fill="none" stroke="#C4A24A" stroke-width=".5" opacity=".4"/>
-        <rect x="16" y="10" width="7" height="7" transform="rotate(45 16 13.5)" fill="#C4A24A" opacity=".45"/>
-        <circle cx="16" cy="16" r="2.5" fill="#C4A24A" opacity=".6"/>
-      </svg>
-      <span class="wm">MOSAIC</span>
-      <div class="tagline">Collective · Curated · Experiential</div>
+      <span class="wm">Riviera</span>
+      <div class="tagline">Nostalgic · Boutique · Manor</div>
     </div>
+    
     <div class="pal">
-      <div class="sw"><div class="swb" style="height:48px;background:#142014"></div><span class="swn">Forest</span></div>
-      <div class="sw"><div class="swb" style="height:40px;background:#C4A24A"></div><span class="swn">Antique Gold</span></div>
-      <div class="sw"><div class="swb" style="height:36px;background:#8B6B2A"></div><span class="swn">Bronze</span></div>
-      <div class="sw"><div class="swb" style="height:32px;background:#C47040"></div><span class="swn">Copper</span></div>
-      <div class="sw"><div class="swb" style="height:26px;background:#F4ECD5"></div><span class="swn">Parchment</span></div>
+      <div class="sw"><div class="swb" style="background:#1B3022; height:48px"></div><div class="swn">Forest Noir</div></div>
+      <div class="sw"><div class="swb" style="background:#A3B18A; height:40px"></div><div class="swn">Soft Sage</div></div>
+      <div class="sw"><div class="swb" style="background:#F9F7F1; height:36px"></div><div class="swn">Heirloom Cream</div></div>
     </div>
+    
     <div class="tyrow">
-      <div class="tyeye">Typography — Cinzel · Cormorant Garamond</div>
-      <div class="tydemo">Curated Moments</div>
-      <div class="tybody">An event collective that transforms space into something extraordinary — where local artists, makers, and visionaries converge into one beautifully composed world.</div>
+      <div class="tyeye">Typography — Playfair Display</div>
+      <div class="tydemo">Nostalgic Riviera</div>
+      <div class="tybody">A blend of "Quiet Luxury" and boutique hospitality. Evokes the warmth of a coastal villa with elegant, high-contrast serif fonts.</div>
     </div>
+    
     <div class="div"></div>
+    
     <div class="varea">
       <button class="vbtn" id="vbtn-01" onclick="vote('01')">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg>
@@ -158,76 +211,16 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
       <span class="vinfo" id="vinfo-01">0 votes</span>
     </div>
   </div>
+  
   <div class="bart">
-    <svg width="100%" height="100%" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="pat01" x="0" y="0" width="72" height="72" patternUnits="userSpaceOnUse">
-          <rect x="12" y="12" width="48" height="48" fill="none" stroke="#C4A24A" stroke-width=".5" opacity=".18"/>
-          <rect x="12" y="12" width="48" height="48" transform="rotate(45 36 36)" fill="none" stroke="#C4A24A" stroke-width=".4" opacity=".13"/>
-          <circle cx="36" cy="36" r="2" fill="#C4A24A" opacity=".22"/>
-          <circle cx="0"  cy="0"  r="1.5" fill="#C4A24A" opacity=".18"/>
-          <circle cx="72" cy="0"  r="1.5" fill="#C4A24A" opacity=".18"/>
-          <circle cx="0"  cy="72" r="1.5" fill="#C4A24A" opacity=".18"/>
-          <circle cx="72" cy="72" r="1.5" fill="#C4A24A" opacity=".18"/>
-        </pattern>
-      </defs>
-      <rect width="600" height="700" fill="url(#pat01)"/>
-
-      <!-- Central medallion -->
-      <g transform="translate(300,350)">
-        <circle r="210" fill="none" stroke="#C4A24A" stroke-width=".4" opacity=".12"/>
-        <circle r="195" fill="none" stroke="#C4A24A" stroke-width=".6" opacity=".18" stroke-dasharray="5 4"/>
-        <circle r="175" fill="none" stroke="#C4A24A" stroke-width=".5" opacity=".15"/>
-
-        <!-- Petal ring: 8 ellipses -->
-        <g opacity=".28" stroke="#C4A24A" stroke-width=".8" fill="none">
-          <ellipse rx="40" ry="90" transform="rotate(0)"/>
-          <ellipse rx="40" ry="90" transform="rotate(45)"/>
-          <ellipse rx="40" ry="90" transform="rotate(90)"/>
-          <ellipse rx="40" ry="90" transform="rotate(135)"/>
-        </g>
-
-        <!-- Octagon ring -->
-        <polygon points="0,-120 85,-85 120,0 85,85 0,120 -85,85 -120,0 -85,-85" fill="none" stroke="#C4A24A" stroke-width=".8" opacity=".35"/>
-        <polygon points="0,-88 62,-62 88,0 62,62 0,88 -62,62 -88,0 -62,-62" fill="none" stroke="#C4A24A" stroke-width=".5" opacity=".25"/>
-
-        <!-- 8-point star -->
-        <polygon points="0,-68 9,-24 48,-48 24,-9 68,0 24,9 48,48 9,24 0,68 -9,24 -48,48 -24,9 -68,0 -24,-9 -48,-48 -9,-24" fill="#C4A24A" opacity=".18"/>
-        <polygon points="0,-68 9,-24 48,-48 24,-9 68,0 24,9 48,48 9,24 0,68 -9,24 -48,48 -24,9 -68,0 -24,-9 -48,-48 -9,-24" fill="none" stroke="#C4A24A" stroke-width=".8" opacity=".45"/>
-
-        <circle r="22" fill="#C4A24A" opacity=".18"/>
-        <circle r="14" fill="#C4A24A" opacity=".3"/>
-        <circle r="7"  fill="#C4A24A" opacity=".65"/>
-        <circle r="3"  fill="#C4A24A" opacity=".9"/>
-      </g>
-
-      <!-- Corner ornaments -->
-      <g stroke="#C4A24A" fill="#C4A24A" opacity=".28">
-        <g transform="translate(72,72)">
-          <polygon points="0,-24 6,-6 24,0 6,6 0,24 -6,6 -24,0 -6,-6" fill="none" stroke-width=".7"/>
-          <circle r="3.5"/>
-        </g>
-        <g transform="translate(528,72)">
-          <polygon points="0,-24 6,-6 24,0 6,6 0,24 -6,6 -24,0 -6,-6" fill="none" stroke-width=".7"/>
-          <circle r="3.5"/>
-        </g>
-        <g transform="translate(72,628)">
-          <polygon points="0,-24 6,-6 24,0 6,6 0,24 -6,6 -24,0 -6,-6" fill="none" stroke-width=".7"/>
-          <circle r="3.5"/>
-        </g>
-        <g transform="translate(528,628)">
-          <polygon points="0,-24 6,-6 24,0 6,6 0,24 -6,6 -24,0 -6,-6" fill="none" stroke-width=".7"/>
-          <circle r="3.5"/>
-        </g>
-      </g>
-
-      <text x="300" y="342" text-anchor="middle" font-family="Cinzel,serif" font-size="12" letter-spacing="10" fill="#C4A24A" opacity=".42">MOSAIC</text>
-      <text x="300" y="362" text-anchor="middle" font-family="Cinzel,serif" font-size="8" letter-spacing="6" fill="#C4A24A" opacity=".28">COLLECTIVE</text>
-    </svg>
+    <div class="riviera-gallery">
+      <img src="paloma.jpg" alt="Paloma Swimwear Label" class="riviera-img">
+      <img src="casa-club.jpg" alt="Casa Club Member Tag" class="riviera-img">
+      <img src="casa-lorena.jpg" alt="La Casa Lorena Moodboard" class="riviera-img img-wide">
+    </div>
   </div>
 </div>
 
-<!-- ═══════════════════ BOARD 02 — SAFFRON HOUR ═══════════════════ -->
 <div class="board b02" id="board-02">
   <div class="binfo">
     <div class="wm-wrap">
@@ -258,30 +251,21 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
   </div>
   <div class="bart">
     <svg width="100%" height="100%" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <!-- Background arch repeats -->
       <g fill="none" stroke="#D4891A" opacity=".1">
-        <!-- Large arches -->
         <path d="M50,700 L50,310 Q50,110 200,110 Q350,110 350,310 L350,700" stroke-width=".8"/>
         <path d="M250,700 L250,310 Q250,110 400,110 Q550,110 550,310 L550,700" stroke-width=".8"/>
-        <!-- Medium arches -->
         <path d="M-20,700 L-20,430 Q-20,290 80,290 Q180,290 180,430 L180,700" stroke-width=".5"/>
         <path d="M180,700 L180,430 Q180,290 280,290 Q380,290 380,430 L380,700" stroke-width=".5"/>
         <path d="M380,700 L380,430 Q380,290 480,290 Q580,290 580,430 L580,700" stroke-width=".5"/>
       </g>
-
-      <!-- Hero arch: warm glow fill -->
       <path d="M150,700 L150,260 Q150,80 300,80 Q450,80 450,260 L450,700" fill="#D4891A" opacity=".055"/>
       <path d="M150,700 L150,260 Q150,80 300,80 Q450,80 450,260 L450,700" fill="none" stroke="#D4891A" stroke-width="1.5" opacity=".38"/>
       <path d="M180,700 L180,280 Q180,120 300,120 Q420,120 420,280 L420,700" fill="none" stroke="#D4891A" stroke-width=".7" opacity=".22"/>
-
-      <!-- Keystone ornament -->
       <g transform="translate(300,80)">
         <polygon points="0,-22 7,-7 22,0 7,7 0,22 -7,7 -22,0 -7,-7" fill="#D4891A" opacity=".55"/>
         <polygon points="0,-30 8,-8 30,0 8,8 0,30 -8,8 -30,0 -8,-8" fill="none" stroke="#D4891A" stroke-width=".8" opacity=".35"/>
         <circle r="4.5" fill="#D4891A" opacity=".75"/>
       </g>
-
-      <!-- Column capitals -->
       <g transform="translate(150,265)" stroke="#D4891A" fill="none" opacity=".25">
         <line x1="-20" y1="0" x2="20" y2="0" stroke-width=".8"/>
         <line x1="-14" y1="8" x2="14" y2="8" stroke-width=".5"/>
@@ -292,8 +276,6 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
         <line x1="-14" y1="8" x2="14" y2="8" stroke-width=".5"/>
         <line x1="-8" y1="-8" x2="8" y2="-8" stroke-width=".5"/>
       </g>
-
-      <!-- Central rosette -->
       <g transform="translate(300,430)" opacity=".45">
         <circle r="62" fill="none" stroke="#D4891A" stroke-width=".6" opacity=".3"/>
         <circle r="52" fill="none" stroke="#D4891A" stroke-width="1" opacity=".22"/>
@@ -309,8 +291,6 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
         <circle r="7"  fill="#D4891A" opacity=".42"/>
         <circle r="3"  fill="#D4891A" opacity=".65"/>
       </g>
-
-      <!-- Horizontal rule -->
       <line x1="110" y1="580" x2="490" y2="580" stroke="#D4891A" stroke-width=".4" opacity=".2"/>
       <text x="300" y="600" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="16" letter-spacing="4" fill="#F6EDD6" opacity=".22" font-style="italic">Mosaic</text>
       <text x="300" y="618" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="9" letter-spacing="7" fill="#D4891A" opacity=".3">COLLECTIVE</text>
@@ -318,7 +298,6 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
   </div>
 </div>
 
-<!-- ═══════════════════ BOARD 03 — TIERRA ═══════════════════ -->
 <div class="board b03" id="board-03">
   <div class="binfo">
     <div class="wm-wrap">
@@ -369,22 +348,12 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
         </pattern>
       </defs>
       <rect width="600" height="700" fill="url(#pat03)"/>
-
-      <!-- Event invitation card -->
       <filter id="shd"><feDropShadow dx="4" dy="6" stdDeviation="8" flood-color="#8B4A28" flood-opacity=".2"/></filter>
-
-      <!-- Card body -->
       <rect x="148" y="138" width="304" height="420" rx="3" fill="#F0E0C8" filter="url(#shd)"/>
       <rect x="158" y="148" width="284" height="400" rx="2" fill="none" stroke="#B55832" stroke-width=".6" opacity=".25"/>
-
-      <!-- Terracotta header band -->
       <rect x="148" y="138" width="304" height="88" rx="3" fill="#B55832"/>
-      <!-- Sage stripe -->
       <rect x="148" y="222" width="304" height="5" fill="#6B8C72"/>
-      <!-- Sand stripe -->
       <rect x="148" y="227" width="304" height="2.5" fill="#E8C98A" opacity=".7"/>
-
-      <!-- Tile dots in header -->
       <g fill="rgba(240,224,200,.22)" transform="translate(148,138)">
         <rect x="18" y="14" width="16" height="16" transform="rotate(45 26 22)"/>
         <rect x="60" y="14" width="16" height="16" transform="rotate(45 68 22)"/>
@@ -394,29 +363,20 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
         <rect x="228" y="14" width="16" height="16" transform="rotate(45 236 22)"/>
         <rect x="270" y="14" width="16" height="16" transform="rotate(45 278 22)"/>
       </g>
-
-      <!-- Card content -->
       <text x="300" y="280" text-anchor="middle" font-family="Playfair Display,serif" font-size="10" letter-spacing="8" fill="#2C2018" opacity=".42">YOU ARE INVITED</text>
-
       <text x="300" y="316" text-anchor="middle" font-family="Playfair Display,serif" font-size="34" fill="#2C2018" opacity=".88">Mosaic</text>
       <text x="300" y="348" text-anchor="middle" font-family="Playfair Display,serif" font-size="34" fill="#2C2018" opacity=".88">Collective</text>
-
-      <!-- Ornament divider -->
       <line x1="222" y1="366" x2="290" y2="366" stroke="#B55832" stroke-width=".6" opacity=".4"/>
       <circle cx="300" cy="366" r="3" fill="#B55832" opacity=".55"/>
       <line x1="310" y1="366" x2="378" y2="366" stroke="#B55832" stroke-width=".6" opacity=".4"/>
-
       <text x="300" y="390" text-anchor="middle" font-family="Jost,sans-serif" font-size="9" letter-spacing="5" fill="#2C2018" opacity=".42">SPRING GATHERING 2024</text>
       <text x="300" y="412" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="13" letter-spacing="2" fill="#B55832" opacity=".72" font-style="italic">Roanoke, Virginia</text>
-
-      <!-- Bottom sage accent -->
       <rect x="148" y="508" width="304" height="50" fill="#6B8C72" opacity=".14"/>
       <text x="300" y="539" text-anchor="middle" font-family="Jost,sans-serif" font-size="8.5" letter-spacing="5.5" fill="#6B8C72" opacity=".65">MOSAICCO.COM</text>
     </svg>
   </div>
 </div>
 
-<!-- ═══════════════════ BOARD 04 — OBSIDIAN ═══════════════════ -->
 <div class="board b04" id="board-04">
   <div class="binfo">
     <div class="wm-wrap">
@@ -460,15 +420,10 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
         </pattern>
       </defs>
       <rect width="600" height="700" fill="url(#pat04)"/>
-
-      <!-- Grand medallion -->
       <g transform="translate(300,350)">
-        <!-- Outer rings -->
         <circle r="238" fill="none" stroke="#C9A445" stroke-width=".3" opacity=".1"/>
         <circle r="224" fill="none" stroke="#C9A445" stroke-width=".5" opacity=".15" stroke-dasharray="6 4"/>
         <circle r="210" fill="none" stroke="#C9A445" stroke-width=".4" opacity=".12"/>
-
-        <!-- 12 radiating spokes -->
         <g stroke="#C9A445" stroke-width=".5" opacity=".22">
           <line x1="0"    y1="-210" x2="0"    y2="-148"/>
           <line x1="105"  y1="-182" x2="74"   y2="-128"/>
@@ -483,42 +438,26 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
           <line x1="-182" y1="-105" x2="-128" y2="-74"/>
           <line x1="-105" y1="-182" x2="-74"  y2="-128"/>
         </g>
-
-        <!-- 12-point star outer -->
         <polygon points="0,-148 10,-52 74,-128 36,-18 128,-74 52,-10 148,0 52,10 128,74 36,18 74,128 10,52 0,148 -10,52 -74,128 -36,18 -128,74 -52,10 -148,0 -52,-10 -128,-74 -36,-18 -74,-128 -10,-52" fill="none" stroke="#C9A445" stroke-width="1" opacity=".3"/>
-
-        <!-- Wine accent diamonds (cardinal) -->
         <g fill="#6B1E2E" opacity=".55">
           <polygon points="0,-158 6,-148 0,-138 -6,-148"/>
           <polygon points="158,0 148,6 138,0 148,-6"/>
           <polygon points="0,158 6,148 0,138 -6,148"/>
           <polygon points="-158,0 -148,6 -138,0 -148,-6"/>
         </g>
-
-        <!-- Middle ring -->
         <circle r="110" fill="none" stroke="#C9A445" stroke-width=".8" opacity=".25"/>
-        <!-- 8-point star inner -->
         <polygon points="0,-94 12,-34 66,-66 34,-12 94,0 34,12 66,66 12,34 0,94 -12,34 -66,66 -34,12 -94,0 -34,-12 -66,-66 -12,-34" fill="#C9A445" opacity=".1"/>
         <polygon points="0,-94 12,-34 66,-66 34,-12 94,0 34,12 66,66 12,34 0,94 -12,34 -66,66 -34,12 -94,0 -34,-12 -66,-66 -12,-34" fill="none" stroke="#C9A445" stroke-width="1.2" opacity=".38"/>
-
-        <!-- Inner glow ring -->
         <circle r="62" fill="#C9A445" opacity=".06"/>
         <circle r="60" fill="none" stroke="#C9A445" stroke-width="1.5" opacity=".45"/>
-
-        <!-- Wine accent ring -->
         <circle r="48" fill="none" stroke="#6B1E2E" stroke-width="2.5" opacity=".25"/>
-
-        <!-- Core star -->
         <polygon points="0,-44 12,-12 44,0 12,12 0,44 -12,12 -44,0 -12,-12" fill="#C9A445" opacity=".25"/>
         <polygon points="0,-44 12,-12 44,0 12,12 0,44 -12,12 -44,0 -12,-12" fill="none" stroke="#C9A445" stroke-width="1" opacity=".55"/>
-
         <circle r="20" fill="#C9A445" opacity=".18"/>
         <circle r="13" fill="#C9A445" opacity=".32"/>
         <circle r="7"  fill="#C9A445" opacity=".65"/>
         <circle r="3"  fill="#C9A445" opacity=".92"/>
       </g>
-
-      <!-- Corner brackets -->
       <g stroke="#C9A445" stroke-width=".6" fill="#C9A445" opacity=".3">
         <g transform="translate(58,58)">
           <line x1="0" y1="0" x2="36" y2="0"/><line x1="0" y1="0" x2="0" y2="36"/>
@@ -537,17 +476,14 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
           <circle r="2.5"/>
         </g>
       </g>
-
       <text x="300" y="614" text-anchor="middle" font-family="DM Serif Display,serif" font-size="11" letter-spacing="6" fill="#C9A445" opacity=".32">MOSAIC COLLECTIVE</text>
       <text x="300" y="633" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="9" letter-spacing="5" fill="#F5EED8" opacity=".18" font-style="italic">Roanoke · Virginia</text>
     </svg>
   </div>
 </div>
 
-</div><!-- /stage -->
-
-<nav class="nav">
-  <button class="nbtn active" data-id="01" onclick="show('01',this)"><span class="n">01</span><span>The Golden Age</span></button>
+</div><nav class="nav">
+  <button class="nbtn active" data-id="01" onclick="show('01',this)"><span class="n">01</span><span>Nostalgic Riviera</span></button>
   <button class="nbtn" data-id="02" onclick="show('02',this)"><span class="n">02</span><span>Saffron Hour</span></button>
   <button class="nbtn" data-id="03" onclick="show('03',this)"><span class="n">03</span><span>Tierra</span></button>
   <button class="nbtn" data-id="04" onclick="show('04',this)"><span class="n">04</span><span>Obsidian</span></button>
