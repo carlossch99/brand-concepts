@@ -12,9 +12,9 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 
 /* Header */
 .hdr{position:fixed;top:0;left:0;right:0;height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 30px;border-bottom:0.5px solid rgba(255,255,255,.1);z-index:50;background:#0A0908}
-.hdr-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.3em;opacity:.45}
+.hdr-brand{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.3em;opacity:.8}
 .hdr-right{display:flex;gap:20px}
-.tally{font-size:9px;letter-spacing:.12em;opacity:.4;display:flex;align-items:center;gap:6px;text-transform:uppercase;}
+.tally{font-size:9px;letter-spacing:.12em;opacity:.8;display:flex;align-items:center;gap:6px;text-transform:uppercase;}
 .tdot{width:7px;height:7px;border-radius:50%}
 .tcnt{font-weight:500;font-size:14px;opacity:1;min-width:14px}
 
@@ -24,54 +24,59 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 /* Boards */
 .board{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;opacity:0;pointer-events:none;transition:opacity .45s ease}
 .board.active{opacity:1;pointer-events:all}
-.binfo{display:flex;flex-direction:column;justify-content:center;padding:48px 56px;position:relative;overflow:hidden}
-.bart{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.binfo{display:flex;flex-direction:column;justify-content:center;padding:48px 56px;position:relative;overflow-y:auto;}
+.bart{position:relative;overflow-y:auto;display:flex;align-items:center;justify-content:center;padding:40px;}
+
+/* Custom Scrollbars for Panels */
+.binfo::-webkit-scrollbar, .bart::-webkit-scrollbar { width: 6px; }
+.binfo::-webkit-scrollbar-thumb, .bart::-webkit-scrollbar-thumb { background-color: rgba(0,0,0,0.15); border-radius: 10px; }
+.b04 .binfo::-webkit-scrollbar-thumb, .b04 .bart::-webkit-scrollbar-thumb { background-color: rgba(255,255,255,0.15); }
 
 /* Wordmark */
 .wm-wrap{margin-bottom:36px}
 .wm{line-height:1;display:block}
-.tagline{font-size:10px;letter-spacing:.32em;text-transform:uppercase;margin-top:10px;font-weight:300}
+.tagline{font-size:10px;letter-spacing:.32em;text-transform:uppercase;margin-top:10px;font-weight:500;opacity:0.9;}
 
 /* Palette */
 .pal{display:flex;gap:12px;margin-bottom:34px;align-items:flex-end}
 .sw{display:flex;flex-direction:column;align-items:center;gap:7px}
 .swb{width:42px;border-radius:2px}
-.swn{font-size:8.5px;letter-spacing:.1em;opacity:.45;text-transform:uppercase;text-align:center}
+.swn{font-size:8.5px;letter-spacing:.1em;opacity:.8;text-transform:uppercase;text-align:center;font-weight:400;}
 
 /* Type */
 .tyrow{margin-bottom:32px}
-.tyeye{font-size:9px;letter-spacing:.22em;text-transform:uppercase;opacity:.35;margin-bottom:8px}
+.tyeye{font-size:9px;letter-spacing:.22em;text-transform:uppercase;opacity:.85;margin-bottom:8px;font-weight:500;}
 .tydemo{line-height:1.15}
-.tybody{font-size:12px;line-height:1.8;opacity:.55;margin-top:8px;max-width:330px}
+.tybody{font-size:14px;line-height:1.7;opacity:1;margin-top:8px;max-width:350px;font-weight:400;}
 
 /* Divider */
-.div{width:42px;height:.5px;background:currentColor;opacity:.2;margin:26px 0}
+.div{width:42px;height:.5px;background:currentColor;opacity:.3;margin:26px 0}
 
 /* Vote */
 .varea{display:flex;align-items:center;gap:18px}
-.vbtn{display:inline-flex;align-items:center;gap:10px;padding:12px 26px;background:transparent;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s;font-weight:400}
-.vinfo{font-size:11px;letter-spacing:.08em;opacity:.3}
+.vbtn{display:inline-flex;align-items:center;gap:10px;padding:12px 26px;background:transparent;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s;font-weight:500}
+.vinfo{font-size:11px;letter-spacing:.08em;opacity:.7;font-weight:500;}
 
 /* Nav */
 .nav{position:fixed;bottom:0;left:0;right:0;height:56px;display:flex;background:rgba(10,9,8,.97);border-top:.5px solid rgba(255,255,255,.08);z-index:50}
-.nbtn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:none;color:rgba(245,237,216,.28);cursor:pointer;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;transition:color .3s,background .3s;position:relative}
+.nbtn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:none;color:rgba(245,237,216,.4);cursor:pointer;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;transition:color .3s,background .3s;position:relative}
 .nbtn:not(:last-child)::after{content:'';position:absolute;right:0;top:14px;bottom:14px;width:.5px;background:rgba(255,255,255,.08)}
 .nbtn .n{font-size:18px;font-weight:300;font-family:'Cormorant Garamond',serif;line-height:1}
 
 /* Nav Active States */
 .nbtn[data-id="01"].active{color:#A3B18A;background:rgba(163,177,138,.05)}
 .nbtn[data-id="02"].active{color:#D4891A;background:rgba(212,137,26,.04)}
-.nbtn[data-id="03"].active{color:#214A7D;background:rgba(33,74,125,.06)}
+.nbtn[data-id="03"].active{color:#4A85D1;background:rgba(33,74,125,.06)}
 .nbtn[data-id="04"].active{color:#CBA365;background:rgba(203,163,101,.06)}
 .nbtn[data-id="05"].active{color:#AD5233;background:rgba(173,82,51,.06)}
 
 /* ======================== 01 — NOSTALGIC RIVIERA ======================== */
 .b01 .binfo { background: #F9F7F1; color: #1B3022; border: 12px solid #1B3022; } 
-.b01 .bart { background: #A3B18A; padding: 40px; } 
+.b01 .bart { background: #A3B18A; } 
 .b01 .wm { font-family: 'Playfair Display', serif; font-size: 52px; letter-spacing: .12em; color: #1B3022; font-weight: 600; text-transform: uppercase; }
-.b01 .tagline { color: rgba(27, 48, 34, .5); } 
-.b01 .tydemo { font-family: 'Playfair Display', serif; font-size: 26px; letter-spacing: .1em; color: #1B3022; font-weight: 500; }
-.b01 .tybody { color: rgba(27, 48, 34, .7); letter-spacing: .02em; font-family: 'Jost', sans-serif; } 
+.b01 .tagline { color: #1B3022; } 
+.b01 .tydemo { font-family: 'Playfair Display', serif; font-size: 26px; letter-spacing: .1em; color: #1B3022; font-weight: 600; }
+.b01 .tybody { color: #1B3022; font-family: 'Jost', sans-serif; } 
 .b01 .vbtn { border: 1px solid #1B3022; color: #1B3022; } 
 .b01 .vbtn:hover, .b01 .vbtn.voted { background: #1B3022; color: #F9F7F1; } 
 .b01 .swn, .b01 .tyeye, .b01 .vinfo { color: #1B3022; }
@@ -82,11 +87,11 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 
 /* ======================== 02 — GLOBAL OASIS ======================== */
 .b02 .binfo { background: #EAE0C8; color: #2B1A10; border: 12px solid #2B1A10; }
-.b02 .bart { background: #8B3A2B; padding: 40px; }
+.b02 .bart { background: #8B3A2B; }
 .b02 .wm { font-family: 'Cormorant Garamond', serif; font-size: 64px; letter-spacing: .05em; color: #2B1A10; font-weight: 600; text-transform: uppercase; }
-.b02 .tagline { color: rgba(43, 26, 16, .6); font-weight: 500; }
-.b02 .tydemo { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #8B3A2B; }
-.b02 .tybody { color: rgba(43, 26, 16, .8); font-family: 'Jost', sans-serif; }
+.b02 .tagline { color: #2B1A10; }
+.b02 .tydemo { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #8B3A2B; font-weight: 600;}
+.b02 .tybody { color: #2B1A10; font-family: 'Jost', sans-serif; }
 .b02 .vbtn { border: 1px solid #2B1A10; color: #2B1A10; }
 .b02 .vbtn:hover, .b02 .vbtn.voted { background: #2B1A10; color: #EAE0C8; }
 .b02 .swn, .b02 .tyeye, .b02 .vinfo { color: #2B1A10; }
@@ -96,9 +101,10 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 
 /* ======================== 03 — MED CABANA ======================== */
 .b03 .binfo { background: #F4EFE6; color: #214A7D; border: 12px solid #214A7D; }
-.b03 .bart { background: #D45C3E; padding: 30px; }
+.b03 .bart { background: #D45C3E; }
 .b03 .wm { font-family: 'DM Serif Display', serif; font-size: 60px; letter-spacing: .08em; font-weight: 400; text-transform: uppercase; }
-.b03 .tybody { font-family: 'Jost', sans-serif; }
+.b03 .tagline { color: #214A7D; }
+.b03 .tybody { font-family: 'Jost', sans-serif; color: #214A7D;}
 .b03 .vbtn { border: 1px solid #214A7D; color: #214A7D; }
 .b03 .vbtn:hover, .b03 .vbtn.voted { background: #214A7D; color: #F4EFE6; }
 .b03 .swn { color: #214A7D; }
@@ -107,9 +113,10 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 
 /* ======================== 04 — NOCTURNAL EDEN ======================== */
 .b04 .binfo { background: #080A09; color: #E8D8C8; border: 12px solid #0A1210; }
-.b04 .bart { background: #141A18; padding: 30px; }
+.b04 .bart { background: #141A18; }
 .b04 .wm { font-family: 'DM Serif Display', serif; font-size: 60px; letter-spacing: .08em; text-transform: uppercase; }
-.b04 .tybody { font-family: 'Jost', sans-serif; }
+.b04 .tagline { color: #CBA365; }
+.b04 .tybody { font-family: 'Jost', sans-serif; color: #E8D8C8;}
 .b04 .vbtn { border: 1px solid #CBA365; color: #CBA365; }
 .b04 .vbtn:hover, .b04 .vbtn.voted { background: #CBA365; color: #080A09; }
 .b04 .swn { color: #CBA365; }
@@ -119,31 +126,46 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 
 /* ======================== 05 — RUSTIC GATHERING ======================== */
 .b05 .binfo { background: #F2EBE1; color: #3B2818; border: 12px solid #3B2818; }
-.b05 .bart { background: #DDA750; padding: 30px; }
+.b05 .bart { background: #DDA750; }
 .b05 .wm { font-family: 'DM Serif Display', serif; font-size: 56px; letter-spacing: .08em; text-transform: uppercase; color: #AD5233; }
-.b05 .tagline { color: rgba(59, 40, 24, .6); }
-.b05 .tydemo { font-family: 'DM Serif Display', serif; font-size: 28px; color: #3B2818; }
-.b05 .tybody { color: rgba(59, 40, 24, .8); font-family: 'Jost', sans-serif; }
+.b05 .tagline { color: #3B2818; }
+.b05 .tydemo { font-family: 'DM Serif Display', serif; font-size: 28px; color: #3B2818; font-weight: 600;}
+.b05 .tybody { color: #3B2818; font-family: 'Jost', sans-serif; }
 .b05 .vbtn { border: 1px solid #AD5233; color: #AD5233; }
 .b05 .vbtn:hover, .b05 .vbtn.voted { background: #AD5233; color: #F2EBE1; }
 .b05 .swn, .b05 .tyeye, .b05 .vinfo { color: #3B2818; }
 .b05 .div { background: #3B2818; }
+.rustic-gallery { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 16px; width: 100%; height: 100%; }
+.rustic-img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; box-shadow: 0 6px 20px rgba(59, 40, 24, 0.2); }
 
-/* 4-Image Grid Styles */
-.rustic-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 columns */
-  grid-template-rows: 1fr 1fr;    /* 2 rows */
-  gap: 16px;
-  width: 100%;
-  height: 100%;
-}
-.rustic-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 4px;
-  box-shadow: 0 6px 20px rgba(59, 40, 24, 0.2);
+/* ======================== MOBILE RESPONSIVENESS ======================== */
+@media (max-width: 850px) {
+  /* Header Adjustments */
+  .hdr { flex-direction: column; justify-content: center; height: auto; padding: 12px 20px; gap: 10px; position: static; }
+  .hdr-right { flex-wrap: wrap; justify-content: center; gap: 15px; }
+  
+  /* Stage & Layout Adjustments */
+  .stage { top: 0; bottom: 56px; position: static; }
+  .board { grid-template-columns: 1fr; display: none; overflow-y: auto; height: calc(100vh - 56px); }
+  .board.active { display: block; }
+  
+  /* Panel Adjustments */
+  .binfo, .bart { height: auto; overflow: visible; padding: 40px 24px; border-width: 6px !important;}
+  .wm { font-size: 44px !important; }
+  .tybody { max-width: 100%; }
+  
+  /* Navigation Bar - Scrollable */
+  .nav { justify-content: flex-start; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+  .nbtn { min-width: 140px; flex-shrink: 0; padding: 0 15px; }
+  
+  /* Gallery Fallbacks */
+  .cabana-gallery { grid-template-columns: 1fr 1fr; }
+  .eden-gallery { grid-template-columns: 1fr 1fr; }
+  .riviera-gallery { grid-template-columns: 1fr; }
+  .oasis-gallery { grid-template-columns: 1fr; }
+  .rustic-gallery { grid-template-columns: 1fr; }
+  .img-wide, .eden-hero { grid-column: span 1; grid-row: span 1; }
+  .cabana-img, .eden-img, .rustic-img, .riviera-img, .oasis-img { height: 250px; }
 }
 </style>
 </head>
@@ -154,7 +176,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
   <div class="hdr-right">
     <div class="tally"><div class="tdot" style="background:#1B3022"></div><span>Riviera</span><span class="tcnt" id="cnt-01">0</span></div>
     <div class="tally"><div class="tdot" style="background:#8B3A2B"></div><span>Oasis</span><span class="tcnt" id="cnt-02">0</span></div>
-    <div class="tally"><div class="tdot" style="background:#214A7D"></div><span>Cabana</span><span class="tcnt" id="cnt-03">0</span></div>
+    <div class="tally"><div class="tdot" style="background:#4A85D1"></div><span>Cabana</span><span class="tcnt" id="cnt-03">0</span></div>
     <div class="tally"><div class="tdot" style="background:#CBA365"></div><span>Eden</span><span class="tcnt" id="cnt-04">0</span></div>
     <div class="tally"><div class="tdot" style="background:#AD5233"></div><span>Rustic</span><span class="tcnt" id="cnt-05">0</span></div>
   </div>
@@ -235,7 +257,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
   <div class="binfo">
     <div class="wm-wrap">
       <span class="wm" style="color: #214A7D;">Cabana</span>
-      <div class="tagline" style="color: rgba(33, 74, 125, .6);">Retro · Coastal · Vibrant</div>
+      <div class="tagline">Retro · Coastal · Vibrant</div>
     </div>
     <div class="pal">
       <div class="sw"><div class="swb" style="background:#214A7D; height:48px"></div><div class="swn">Cobalt Blue</div></div>
@@ -243,11 +265,11 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
       <div class="sw"><div class="swb" style="background:#F4EFE6; height:36px"></div><div class="swn">Cabana Cream</div></div>
     </div>
     <div class="tyrow">
-      <div class="tyeye" style="color: #214A7D; opacity: .5;">Typography — Retro Serif</div>
+      <div class="tyeye" style="color: #214A7D;">Typography — Retro Serif</div>
       <div class="tydemo" style="font-family:'DM Serif Display', serif; color:#D45C3E;">Euro-Summer Resort</div>
-      <div class="tybody" style="color: rgba(33, 74, 125, .8);">A lively, sun-drenched aesthetic blending European resort nostalgia with punchy, bold contrasts and playful stripes.</div>
+      <div class="tybody">A lively, sun-drenched aesthetic blending European resort nostalgia with punchy, bold contrasts and playful stripes.</div>
     </div>
-    <div class="div" style="background: #214A7D; opacity: .2;"></div>
+    <div class="div" style="background: #214A7D; opacity: .3;"></div>
     <div class="varea">
       <button class="vbtn" id="vbtn-03" onclick="vote('03')">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg>
@@ -272,7 +294,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
   <div class="binfo">
     <div class="wm-wrap">
       <span class="wm" style="color: #CBA365;">Eden</span>
-      <div class="tagline" style="color: rgba(203, 163, 101, .6);">Midnight · Opulent · Exotic</div>
+      <div class="tagline">Midnight · Opulent · Exotic</div>
     </div>
     <div class="pal">
       <div class="sw"><div class="swb" style="background:#0A1210; height:48px"></div><div class="swn">Midnight Forest</div></div>
@@ -280,11 +302,11 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
       <div class="sw"><div class="swb" style="background:#CBA365; height:36px"></div><div class="swn">Antique Brass</div></div>
     </div>
     <div class="tyrow">
-      <div class="tyeye" style="color: #CBA365; opacity: .5;">Typography — Dramatic Serif</div>
+      <div class="tyeye" style="color: #CBA365;">Typography — Dramatic Serif</div>
       <div class="tydemo" style="font-family:'DM Serif Display', serif; color:#E8D8C8;">Nocturnal Eden</div>
-      <div class="tybody" style="color: rgba(232, 216, 200, .6);">A moody, highly opulent aesthetic. Perfect for exclusive, high-end evening events featuring velvet drapes, candlelit tables, and exotic botanicals.</div>
+      <div class="tybody">A moody, highly opulent aesthetic. Perfect for exclusive, high-end evening events featuring velvet drapes, candlelit tables, and exotic botanicals.</div>
     </div>
-    <div class="div" style="background: #CBA365; opacity: .2;"></div>
+    <div class="div" style="background: #CBA365; opacity: .3;"></div>
     <div class="varea">
       <button class="vbtn" id="vbtn-04" onclick="vote('04')">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg>
@@ -310,22 +332,18 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
       <span class="wm">Gathering</span>
       <div class="tagline">Warm · Authentic · Community</div>
     </div>
-    
     <div class="pal">
       <div class="sw"><div class="swb" style="background:#3B2818; height:48px"></div><div class="swn">Saddle Brown</div></div>
       <div class="sw"><div class="swb" style="background:#AD5233; height:40px"></div><div class="swn">Sunbaked Clay</div></div>
       <div class="sw"><div class="swb" style="background:#DDA750; height:36px"></div><div class="swn">Golden Mustard</div></div>
       <div class="sw"><div class="swb" style="background:#F2EBE1; height:32px"></div><div class="swn">Canvas Cream</div></div>
     </div>
-    
     <div class="tyrow">
-      <div class="tyeye" style="color: #AD5233; opacity: .7;">Typography — Rugged Display & Warm Sans</div>
+      <div class="tyeye" style="color: #AD5233;">Typography — Rugged Display & Warm Sans</div>
       <div class="tydemo" style="font-family:'DM Serif Display', serif; color:#3B2818;">Rustic Hearth</div>
       <div class="tybody">Earthy, unpretentious, and deeply authentic. Feels like a farm-to-table dinner party or an upscale outdoor market celebrating community.</div>
     </div>
-    
     <div class="div"></div>
-    
     <div class="varea">
       <button class="vbtn" id="vbtn-05" onclick="vote('05')">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg>
@@ -334,7 +352,6 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
       <span class="vinfo" id="vinfo-05" style="color: #3B2818;">0 votes</span>
     </div>
   </div>
-  
   <div class="bart">
     <div class="rustic-gallery">
       <img src="wine-table.jpg" alt="Farm to table wine setup" class="rustic-img">
