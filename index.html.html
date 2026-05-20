@@ -60,7 +60,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 .nbtn[data-id="01"].active{color:#A3B18A;background:rgba(163,177,138,.05)}
 .nbtn[data-id="02"].active{color:#D4891A;background:rgba(212,137,26,.04)}
 .nbtn[data-id="03"].active{color:#214A7D;background:rgba(33,74,125,.06)}
-.nbtn[data-id="04"].active{color:#C9A445;background:rgba(201,164,69,.04)}
+.nbtn[data-id="04"].active{color:#CBA365;background:rgba(203,163,101,.06)}
 
 /* ======================== 01 — NOSTALGIC RIVIERA ======================== */
 .b01 .binfo { 
@@ -245,15 +245,58 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 }
 
 /* ======================== 04 — OBSIDIAN ======================== */
-.b04 .binfo{background:#0C0B09;color:#F5EED8}
-.b04 .bart{background:#100F0C}
-.b04 .wm{font-family:'DM Serif Display',serif;font-size:62px;letter-spacing:.06em;color:#C9A445}
-.b04 .tagline{color:rgba(245,238,216,.32);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:.22em}
-.b04 .tydemo{font-family:'DM Serif Display',serif;font-size:28px;color:#F5EED8}
-.b04 .tybody{font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:rgba(245,238,216,.5);letter-spacing:.02em}
-.b04 .vbtn{border:1px solid #C9A445;color:#C9A445}
-.b04 .vbtn:hover,.b04 .vbtn.voted{background:#C9A445;color:#0C0B09}
-.b04 .swn,.b04 .tyeye,.b04 .vinfo{color:#F5EED8}
+/* ======================== 04 — NOCTURNAL EDEN ======================== */
+.b04 .binfo {
+  background: #080A09; /* Deepest black/green */
+  color: #E8D8C8; /* Vintage Parchment */
+  border: 12px solid #0A1210;
+}
+.b04 .bart {
+  background: #141A18; /* Matte Forest Background */
+  padding: 30px;
+}
+.b04 .wm {
+  font-family: 'DM Serif Display', serif;
+  font-size: 60px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.b04 .tybody {
+  font-family: 'Jost', sans-serif;
+}
+.b04 .vbtn {
+  border: 1px solid #CBA365;
+  color: #CBA365;
+}
+.b04 .vbtn:hover, .b04 .vbtn.voted {
+  background: #CBA365;
+  color: #080A09;
+}
+.b04 .swn {
+  color: #CBA365;
+}
+
+/* 5-Image Mosaic Grid Styles */
+.eden-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+}
+.eden-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+.eden-hero {
+  grid-column: span 2; /* Spans exactly half the width */
+  grid-row: span 2; /* Spans the full height */
+}
+
 </style>
 </head>
 <body>
@@ -264,7 +307,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
     <div class="tally"><div class="tdot" style="background:#1B3022"></div><span>Nostalgic Riviera</span><span class="tcnt" id="cnt-01">0</span></div>
     <div class="tally"><div class="tdot" style="background:#D4891A"></div><span>Global Oasis</span><span class="tcnt" id="cnt-02">0</span></div>
     <div class="tally"><div class="tdot" style="background:#214A7D"></div><span>Med Cabana</span><span class="tcnt" id="cnt-03">0</span></div>
-    <div class="tally"><div class="tdot" style="background:#C9A445"></div><span>Obsidian</span><span class="tcnt" id="cnt-04">0</span></div>
+    <div class="tally"><div class="tdot" style="background:#CBA365"></div><span>Nocturnal Eden</span><span class="tcnt" id="cnt-04">0</span></div>
   </div>
 </header>
 
@@ -394,113 +437,49 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 <div class="board b04" id="board-04">
   <div class="binfo">
     <div class="wm-wrap">
-      <svg width="42" height="30" viewBox="0 0 42 30" style="margin-bottom:14px;display:block">
-        <polyline points="4,26 4,10 13,18 21,4 29,18 38,10 38,26" fill="none" stroke="#C9A445" stroke-width="1.1" opacity=".82" stroke-linejoin="round" stroke-linecap="round"/>
-        <line x1="0" y1="26" x2="42" y2="26" stroke="#C9A445" stroke-width=".7" opacity=".48"/>
-        <circle cx="21" cy="4"  r="2.2" fill="#C9A445" opacity=".9"/>
-        <circle cx="4"  cy="10" r="1.6" fill="#C9A445" opacity=".7"/>
-        <circle cx="38" cy="10" r="1.6" fill="#C9A445" opacity=".7"/>
-      </svg>
-      <span class="wm">Mosaic</span>
-      <div class="tagline">An Extraordinary Collective</div>
+      <span class="wm" style="color: #CBA365;">Eden</span>
+      <div class="tagline" style="color: rgba(203, 163, 101, .6);">Midnight · Opulent · Exotic</div>
     </div>
+    
     <div class="pal">
-      <div class="sw"><div class="swb" style="height:48px;background:#0C0B09"></div><span class="swn">Onyx</span></div>
-      <div class="sw"><div class="swb" style="height:40px;background:#C9A445"></div><span class="swn">Burnished Gold</span></div>
-      <div class="sw"><div class="swb" style="height:36px;background:#6B1E2E"></div><span class="swn">Deep Wine</span></div>
-      <div class="sw"><div class="swb" style="height:32px;background:#A87B3A"></div><span class="swn">Bronze</span></div>
-      <div class="sw"><div class="swb" style="height:26px;background:#F5EED8"></div><span class="swn">Ivory</span></div>
+      <div class="sw"><div class="swb" style="background:#0A1210; height:48px"></div><div class="swn">Midnight Forest</div></div>
+      <div class="sw"><div class="swb" style="background:#4A1C1C; height:40px"></div><div class="swn">Oxblood</div></div>
+      <div class="sw"><div class="swb" style="background:#CBA365; height:36px"></div><div class="swn">Antique Brass</div></div>
     </div>
+    
     <div class="tyrow">
-      <div class="tyeye">Typography — DM Serif Display · Cormorant</div>
-      <div class="tydemo">The Collective</div>
-      <div class="tybody" style="font-family:'Cormorant Garamond',serif;font-style:italic">Where the extraordinary becomes the everyday — events as pure theatre, beauty as the only point of entry.</div>
+      <div class="tyeye" style="color: #CBA365; opacity: .5;">Typography — Dramatic Serif</div>
+      <div class="tydemo" style="font-family:'DM Serif Display', serif; color:#E8D8C8;">Nocturnal Eden</div>
+      <div class="tybody" style="color: rgba(232, 216, 200, .6);">A moody, highly opulent aesthetic. Perfect for exclusive, high-end evening events featuring velvet drapes, candlelit tables, and exotic botanicals.</div>
     </div>
-    <div class="div" style="background:rgba(201,164,69,.22)"></div>
+    
+    <div class="div" style="background: #CBA365; opacity: .2;"></div>
+    
     <div class="varea">
       <button class="vbtn" id="vbtn-04" onclick="vote('04')">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg>
         Vote for this direction
       </button>
-      <span class="vinfo" id="vinfo-04">0 votes</span>
+      <span class="vinfo" id="vinfo-04" style="color: #CBA365;">0 votes</span>
     </div>
   </div>
+  
   <div class="bart">
-    <svg width="100%" height="100%" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="pat04" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
-          <line x1="0" y1="0" x2="28" y2="0" stroke="#C9A445" stroke-width=".18" opacity=".1"/>
-          <line x1="0" y1="0" x2="0" y2="28" stroke="#C9A445" stroke-width=".18" opacity=".1"/>
-        </pattern>
-      </defs>
-      <rect width="600" height="700" fill="url(#pat04)"/>
-      <g transform="translate(300,350)">
-        <circle r="238" fill="none" stroke="#C9A445" stroke-width=".3" opacity=".1"/>
-        <circle r="224" fill="none" stroke="#C9A445" stroke-width=".5" opacity=".15" stroke-dasharray="6 4"/>
-        <circle r="210" fill="none" stroke="#C9A445" stroke-width=".4" opacity=".12"/>
-        <g stroke="#C9A445" stroke-width=".5" opacity=".22">
-          <line x1="0"    y1="-210" x2="0"    y2="-148"/>
-          <line x1="105"  y1="-182" x2="74"   y2="-128"/>
-          <line x1="182"  y1="-105" x2="128"  y2="-74"/>
-          <line x1="210"  y1="0"    x2="148"  y2="0"/>
-          <line x1="182"  y1="105"  x2="128"  y2="74"/>
-          <line x1="105"  y1="182"  x2="74"   y2="128"/>
-          <line x1="0"    y1="210"  x2="0"    y2="148"/>
-          <line x1="-105" y1="182"  x2="-74"  y2="128"/>
-          <line x1="-182" y1="105"  x2="-128" y2="74"/>
-          <line x1="-210" y1="0"    x2="-148" y2="0"/>
-          <line x1="-182" y1="-105" x2="-128" y2="-74"/>
-          <line x1="-105" y1="-182" x2="-74"  y2="-128"/>
-        </g>
-        <polygon points="0,-148 10,-52 74,-128 36,-18 128,-74 52,-10 148,0 52,10 128,74 36,18 74,128 10,52 0,148 -10,52 -74,128 -36,18 -128,74 -52,10 -148,0 -52,-10 -128,-74 -36,-18 -74,-128 -10,-52" fill="none" stroke="#C9A445" stroke-width="1" opacity=".3"/>
-        <g fill="#6B1E2E" opacity=".55">
-          <polygon points="0,-158 6,-148 0,-138 -6,-148"/>
-          <polygon points="158,0 148,6 138,0 148,-6"/>
-          <polygon points="0,158 6,148 0,138 -6,148"/>
-          <polygon points="-158,0 -148,6 -138,0 -148,-6"/>
-        </g>
-        <circle r="110" fill="none" stroke="#C9A445" stroke-width=".8" opacity=".25"/>
-        <polygon points="0,-94 12,-34 66,-66 34,-12 94,0 34,12 66,66 12,34 0,94 -12,34 -66,66 -34,12 -94,0 -34,-12 -66,-66 -12,-34" fill="#C9A445" opacity=".1"/>
-        <polygon points="0,-94 12,-34 66,-66 34,-12 94,0 34,12 66,66 12,34 0,94 -12,34 -66,66 -34,12 -94,0 -34,-12 -66,-66 -12,-34" fill="none" stroke="#C9A445" stroke-width="1.2" opacity=".38"/>
-        <circle r="62" fill="#C9A445" opacity=".06"/>
-        <circle r="60" fill="none" stroke="#C9A445" stroke-width="1.5" opacity=".45"/>
-        <circle r="48" fill="none" stroke="#6B1E2E" stroke-width="2.5" opacity=".25"/>
-        <polygon points="0,-44 12,-12 44,0 12,12 0,44 -12,12 -44,0 -12,-12" fill="#C9A445" opacity=".25"/>
-        <polygon points="0,-44 12,-12 44,0 12,12 0,44 -12,12 -44,0 -12,-12" fill="none" stroke="#C9A445" stroke-width="1" opacity=".55"/>
-        <circle r="20" fill="#C9A445" opacity=".18"/>
-        <circle r="13" fill="#C9A445" opacity=".32"/>
-        <circle r="7"  fill="#C9A445" opacity=".65"/>
-        <circle r="3"  fill="#C9A445" opacity=".92"/>
-      </g>
-      <g stroke="#C9A445" stroke-width=".6" fill="#C9A445" opacity=".3">
-        <g transform="translate(58,58)">
-          <line x1="0" y1="0" x2="36" y2="0"/><line x1="0" y1="0" x2="0" y2="36"/>
-          <circle r="2.5"/>
-        </g>
-        <g transform="translate(542,58)">
-          <line x1="0" y1="0" x2="-36" y2="0"/><line x1="0" y1="0" x2="0" y2="36"/>
-          <circle r="2.5"/>
-        </g>
-        <g transform="translate(58,642)">
-          <line x1="0" y1="0" x2="36" y2="0"/><line x1="0" y1="0" x2="0" y2="-36"/>
-          <circle r="2.5"/>
-        </g>
-        <g transform="translate(542,642)">
-          <line x1="0" y1="0" x2="-36" y2="0"/><line x1="0" y1="0" x2="0" y2="-36"/>
-          <circle r="2.5"/>
-        </g>
-      </g>
-      <text x="300" y="614" text-anchor="middle" font-family="DM Serif Display,serif" font-size="11" letter-spacing="6" fill="#C9A445" opacity=".32">MOSAIC COLLECTIVE</text>
-      <text x="300" y="633" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="9" letter-spacing="5" fill="#F5EED8" opacity=".18" font-style="italic">Roanoke · Virginia</text>
-    </svg>
+    <div class="eden-gallery">
+      <img src="jungle-luxe.jpg" alt="Jungle Luxe Jaguar" class="eden-img eden-hero">
+      <img src="dark-floral.jpg" alt="Dark Floral Pattern" class="eden-img">
+      <img src="heritage-pattern.jpg" alt="Indian Heritage Pattern" class="eden-img">
+      <img src="baroque-frame.jpg" alt="Baroque Gold Detail" class="eden-img">
+      <img src="arched-ruins.jpg" alt="Arched Ruins in Jungle" class="eden-img">
+    </div>
   </div>
 </div>
-
+  
 </div><nav class="nav">
   <button class="nbtn active" data-id="01" onclick="show('01',this)"><span class="n">01</span><span>Nostalgic Riviera</span></button>
   <button class="nbtn" data-id="02" onclick="show('02',this)"><span class="n">02</span><span>Global Oasis</span></button>
   <button class="nbtn" data-id="03" onclick="show('03',this)"><span class="n">03</span><span>Med Cabana</span></button>
-  <button class="nbtn" data-id="04" onclick="show('04',this)"><span class="n">04</span><span>Obsidian</span></button>
+  <button class="nbtn" data-id="04" onclick="show('04',this)"><span class="n">04</span><span>Nocturnal Eden</span></button>
 </nav>
 
 <script>
