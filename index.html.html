@@ -131,16 +131,68 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
   object-position: center 20%;
 }
 
-/* ======================== 02 — SAFFRON HOUR ======================== */
-.b02 .binfo{background:#19140F;color:#F6EDD6}
-.b02 .bart{background:#20190F}
-.b02 .wm{font-family:'Cormorant Garamond',serif;font-size:68px;font-style:italic;font-weight:300;letter-spacing:.02em;color:#F6EDD6}
-.b02 .tagline,.b02 .vinfo{color:rgba(246,237,214,.38)}
-.b02 .tydemo{font-family:'Cormorant Garamond',serif;font-size:30px;font-style:italic;font-weight:300;color:#D4891A}
-.b02 .tybody{font-family:'Cormorant Garamond',serif;font-size:14px;color:rgba(246,237,214,.55)}
-.b02 .vbtn{border:1px solid #D4891A;color:#D4891A}
-.b02 .vbtn:hover,.b02 .vbtn.voted{background:#D4891A;color:#19140F}
-.b02 .swn,.b02 .tyeye{color:#F6EDD6}
+/* ======================== 02 — GLOBAL OASIS ======================== */
+.b02 .binfo {
+  background: #EAE0C8; /* Vintage Parchment */
+  color: #2B1A10; /* Espresso Brown */
+  border: 12px solid #2B1A10; /* "Collector's Archive" frame */
+}
+.b02 .bart {
+  background: #8B3A2B; /* Deep Terracotta */
+  padding: 40px;
+}
+.b02 .wm {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  letter-spacing: .05em;
+  color: #2B1A10;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.b02 .tagline {
+  color: rgba(43, 26, 16, .6);
+  font-weight: 500;
+}
+.b02 .tydemo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  color: #8B3A2B;
+}
+.b02 .tybody {
+  color: rgba(43, 26, 16, .8);
+  font-family: 'Jost', sans-serif;
+}
+.b02 .vbtn {
+  border: 1px solid #2B1A10;
+  color: #2B1A10;
+}
+.b02 .vbtn:hover, .b02 .vbtn.voted {
+  background: #2B1A10;
+  color: #EAE0C8;
+}
+.b02 .swn, .b02 .tyeye, .b02 .vinfo {
+  color: #2B1A10;
+}
+.b02 .div {
+  background: #2B1A10;
+}
+
+/* Oasis Gallery Grid Styles */
+.oasis-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+.oasis-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(43, 26, 16, 0.3);
+}
 
 /* ======================== 03 — TIERRA ======================== */
 .b03 .binfo{background:#F0E0C8;color:#2C2018}
@@ -174,7 +226,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
   <span class="hdr-brand">Mosaic — Brand Identity Review · May 20, 2026</span>
   <div class="hdr-right">
     <div class="tally"><div class="tdot" style="background:#1B3022"></div><span>Nostalgic Riviera</span><span class="tcnt" id="cnt-01">0</span></div>
-    <div class="tally"><div class="tdot" style="background:#D4891A"></div><span>Saffron Hour</span><span class="tcnt" id="cnt-02">0</span></div>
+    <div class="tally"><div class="tdot" style="background:#D4891A"></div><span>Global Oasis</span><span class="tcnt" id="cnt-02">0</span></div>
     <div class="tally"><div class="tdot" style="background:#B55832"></div><span>Tierra</span><span class="tcnt" id="cnt-03">0</span></div>
     <div class="tally"><div class="tdot" style="background:#C9A445"></div><span>Obsidian</span><span class="tcnt" id="cnt-04">0</span></div>
   </div>
@@ -224,23 +276,25 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 <div class="board b02" id="board-02">
   <div class="binfo">
     <div class="wm-wrap">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:.36em;color:#D4891A;margin-bottom:16px;text-transform:uppercase">Est. 2024 · Roanoke, Virginia</div>
-      <span class="wm">Mosaic</span>
-      <div class="tagline">Where Beauty Gathers</div>
+      <span class="wm">Oasis</span>
+      <div class="tagline">Heritage · Cultured · Expedition</div>
     </div>
+    
     <div class="pal">
-      <div class="sw"><div class="swb" style="height:48px;background:#19140F"></div><span class="swn">Obsidian</span></div>
-      <div class="sw"><div class="swb" style="height:40px;background:#D4891A"></div><span class="swn">Saffron</span></div>
-      <div class="sw"><div class="swb" style="height:36px;background:#A85C3C"></div><span class="swn">Terra</span></div>
-      <div class="sw"><div class="swb" style="height:32px;background:#7A3828"></div><span class="swn">Ember</span></div>
-      <div class="sw"><div class="swb" style="height:26px;background:#F6EDD6"></div><span class="swn">Warm White</span></div>
+      <div class="sw"><div class="swb" style="background:#2B1A10; height:48px"></div><div class="swn">Espresso Brown</div></div>
+      <div class="sw"><div class="swb" style="background:#8B3A2B; height:40px"></div><div class="swn">Terracotta</div></div>
+      <div class="sw"><div class="swb" style="background:#D4891A; height:36px"></div><div class="swn">Warm Saffron</div></div>
+      <div class="sw"><div class="swb" style="background:#EAE0C8; height:32px"></div><div class="swn">Vintage Parchment</div></div>
     </div>
+    
     <div class="tyrow">
-      <div class="tyeye">Typography — Cormorant Garamond (Italic)</div>
-      <div class="tydemo">An Evening of Beauty</div>
-      <div class="tybody">Immersive gatherings that honor the art of experience — each event a sensory world unto itself, warm and luminous as firelight.</div>
+      <div class="tyeye">Typography — Antiqued Serif & Script</div>
+      <div class="tydemo" style="font-family:'Cormorant Garamond', serif; font-style:italic;">The Global Oasis</div>
+      <div class="tybody">A highly detailed, narrative-driven design style. It blends worldly motifs with an expensive, boutique hospitality feel.</div>
     </div>
-    <div class="div" style="background:rgba(246,237,214,.2)"></div>
+    
+    <div class="div"></div>
+    
     <div class="varea">
       <button class="vbtn" id="vbtn-02" onclick="vote('02')">
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1l1.5 3.1L11 4.7l-2.5 2.4.6 3.4L6 8.9 2.9 10.5l.6-3.4L1 4.7l3.5-.6L6 1z" fill="currentColor"/></svg>
@@ -249,55 +303,16 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
       <span class="vinfo" id="vinfo-02">0 votes</span>
     </div>
   </div>
+  
   <div class="bart">
-    <svg width="100%" height="100%" viewBox="0 0 600 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <g fill="none" stroke="#D4891A" opacity=".1">
-        <path d="M50,700 L50,310 Q50,110 200,110 Q350,110 350,310 L350,700" stroke-width=".8"/>
-        <path d="M250,700 L250,310 Q250,110 400,110 Q550,110 550,310 L550,700" stroke-width=".8"/>
-        <path d="M-20,700 L-20,430 Q-20,290 80,290 Q180,290 180,430 L180,700" stroke-width=".5"/>
-        <path d="M180,700 L180,430 Q180,290 280,290 Q380,290 380,430 L380,700" stroke-width=".5"/>
-        <path d="M380,700 L380,430 Q380,290 480,290 Q580,290 580,430 L580,700" stroke-width=".5"/>
-      </g>
-      <path d="M150,700 L150,260 Q150,80 300,80 Q450,80 450,260 L450,700" fill="#D4891A" opacity=".055"/>
-      <path d="M150,700 L150,260 Q150,80 300,80 Q450,80 450,260 L450,700" fill="none" stroke="#D4891A" stroke-width="1.5" opacity=".38"/>
-      <path d="M180,700 L180,280 Q180,120 300,120 Q420,120 420,280 L420,700" fill="none" stroke="#D4891A" stroke-width=".7" opacity=".22"/>
-      <g transform="translate(300,80)">
-        <polygon points="0,-22 7,-7 22,0 7,7 0,22 -7,7 -22,0 -7,-7" fill="#D4891A" opacity=".55"/>
-        <polygon points="0,-30 8,-8 30,0 8,8 0,30 -8,8 -30,0 -8,-8" fill="none" stroke="#D4891A" stroke-width=".8" opacity=".35"/>
-        <circle r="4.5" fill="#D4891A" opacity=".75"/>
-      </g>
-      <g transform="translate(150,265)" stroke="#D4891A" fill="none" opacity=".25">
-        <line x1="-20" y1="0" x2="20" y2="0" stroke-width=".8"/>
-        <line x1="-14" y1="8" x2="14" y2="8" stroke-width=".5"/>
-        <line x1="-8" y1="-8" x2="8" y2="-8" stroke-width=".5"/>
-      </g>
-      <g transform="translate(450,265)" stroke="#D4891A" fill="none" opacity=".25">
-        <line x1="-20" y1="0" x2="20" y2="0" stroke-width=".8"/>
-        <line x1="-14" y1="8" x2="14" y2="8" stroke-width=".5"/>
-        <line x1="-8" y1="-8" x2="8" y2="-8" stroke-width=".5"/>
-      </g>
-      <g transform="translate(300,430)" opacity=".45">
-        <circle r="62" fill="none" stroke="#D4891A" stroke-width=".6" opacity=".3"/>
-        <circle r="52" fill="none" stroke="#D4891A" stroke-width="1" opacity=".22"/>
-        <g fill="none" stroke="#D4891A" stroke-width=".9" opacity=".28">
-          <ellipse rx="15" ry="42" transform="rotate(0)"/>
-          <ellipse rx="15" ry="42" transform="rotate(30)"/>
-          <ellipse rx="15" ry="42" transform="rotate(60)"/>
-          <ellipse rx="15" ry="42" transform="rotate(90)"/>
-          <ellipse rx="15" ry="42" transform="rotate(120)"/>
-          <ellipse rx="15" ry="42" transform="rotate(150)"/>
-        </g>
-        <circle r="14" fill="#D4891A" opacity=".22"/>
-        <circle r="7"  fill="#D4891A" opacity=".42"/>
-        <circle r="3"  fill="#D4891A" opacity=".65"/>
-      </g>
-      <line x1="110" y1="580" x2="490" y2="580" stroke="#D4891A" stroke-width=".4" opacity=".2"/>
-      <text x="300" y="600" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="16" letter-spacing="4" fill="#F6EDD6" opacity=".22" font-style="italic">Mosaic</text>
-      <text x="300" y="618" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="9" letter-spacing="7" fill="#D4891A" opacity=".3">COLLECTIVE</text>
-    </svg>
+    <div class="oasis-gallery">
+      <img src="white-lotus.jpg" alt="White Lotus Retreat Branding" class="oasis-img img-wide">
+      <img src="siwa-postcard.jpg" alt="Siwa Vintage Postcard" class="oasis-img">
+      <img src="majestic-arch.jpg" alt="Majestic Arch Decor" class="oasis-img">
+    </div>
   </div>
 </div>
-
+  
 <div class="board b03" id="board-03">
   <div class="binfo">
     <div class="wm-wrap">
@@ -484,7 +499,7 @@ body{font-family:'Jost',sans-serif;font-weight:300;background:#0A0908;color:#F5E
 
 </div><nav class="nav">
   <button class="nbtn active" data-id="01" onclick="show('01',this)"><span class="n">01</span><span>Nostalgic Riviera</span></button>
-  <button class="nbtn" data-id="02" onclick="show('02',this)"><span class="n">02</span><span>Saffron Hour</span></button>
+  <button class="nbtn" data-id="02" onclick="show('02',this)"><span class="n">02</span><span>Global Oasis</span></button>
   <button class="nbtn" data-id="03" onclick="show('03',this)"><span class="n">03</span><span>Tierra</span></button>
   <button class="nbtn" data-id="04" onclick="show('04',this)"><span class="n">04</span><span>Obsidian</span></button>
 </nav>
